@@ -1,0 +1,57 @@
+- var scripts = getBlock('scripts')
+- var styles = getBlock('styles')
+
+- styles.add(['/css/normalize.min.css'])
+- scripts.add(['/vendor/jquery/jquery.min.js', '/js/config.js', '/js/skel.min.js', '/js/skel-panels.min.js'])
+- scripts.add(['/vendor/highlightjs/highlight.pack.js'])
+
+!!!
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="content-type", content="text/html; charset=utf-8")
+    meta(name="Description", content="#{getPageDescription()}")
+    meta(name="Keywords", content="#{getPageKeywords()}")
+    meta(last-updated="#{site.date}")
+
+    != styles.toHTML()
+    script(src="/js/modernizr.min.js")
+    link(rel="stylesheet", href="/vendor/highlightjs/styles/tomorrow-night.css")
+    script(src="/vendor/highlightjs/highlight.pack.js")
+    script
+      hljs.tabReplace = '  ';
+      hljs.initHighlightingOnLoad();
+
+    noscript
+      link(rel="stylesheet", href="/css/skel-noscript.css")
+      link(rel="stylesheet", href="/css/style.css")
+      link(rel="stylesheet", href="/css/style-desktop.css")
+
+
+    title= getPageTitle()
+
+  body
+    #header-wrapper
+      .container
+        .row
+          .12u
+
+            header#header
+              h1
+                a(href='/')= site.name
+              nav#nav
+                each page in getCollection('pages').toJSON()
+                  a(href=page.url)= page.title
+
+    != content
+
+    #footer-wrapper
+      .container
+        .row
+          .12u
+            #copyright 
+              | &copy; #{site.author}. All rights reserved. | Template: 
+              a(href="http://html5up.net/minimaxing",target="_blank",ref="ext") HTML5 UP (heavily modified)
+
+  != scripts.toHTML()
+    

@@ -1,0 +1,41 @@
+---
+layout: default
+title: Home
+pageOrder: 1
+---
+
+#banner-wrapper
+  .container
+    .row.main-row
+      .4u
+        section
+          div.profile
+            img(src="images/headshot.png", alt="Joe Fleming", class="left")
+            ul
+              li I Develop for the Web
+              li Frontend and backend
+              li Enjoying Node.js
+      .8u
+        section
+          div Some more content over here
+
+#main
+  .container
+    .row.main-row
+      .4u
+        section
+          h2 Current Projects
+          ul.link-list
+            li
+              a(href="#") Project 1
+              a(href="#") Project 2
+              a(href="#") Project 3
+      .8u
+        section
+          h2 Latest Blog Post
+          each post,idx in getCollection('posts').toJSON()
+            if (idx === 0)
+              h3= post.title
+              p.content!= post.contentRenderedWithoutLayouts
+              div
+                a.button(href=post.url) Read More

@@ -1,0 +1,16 @@
+RewriteEngine on
+
+RewriteRule ^2007/04/09/why-must-computer-oems-suck /posts/why-must-computer-oems-suck.html [R=301,L]
+RewriteRule ^2007/04/12/configuring-access-in-mediawiki /posts/configuring-access-in-mediawiki.html [R=301,L]
+RewriteRule ^2007/04/25/touchpad-speed-in-linux /posts/touchpad-speed-in-linux.html [R=301,L]
+RewriteRule ^2007/09/06/usb-devices-in-virtualbox /posts/usb-devices-in-virtualbox.html [R=301,L]
+RewriteRule ^2007/12/02/python-pylons-and-fastcgi-on-dreamhost /posts/python-pylons-and-fastcgi-on-dreamhost.html [R=301,L]
+RewriteRule ^2007/12/04/ubuntu-firefox-flash-and-sound /posts/ubuntu-firefox-flash-and-sound.html [R=301,L]
+RewriteRule ^2007/12/16/valid-xhtml-and-opening-links-in-new-windows /posts/valid-xhtml-and-opening-links-in-new-windows.html [R=301,L]
+
+RewriteRule ^2008/01/13/choosing-default-sound-card-in-ubuntu /posts/choosing-default-sound-card-in-ubuntu.html [R=301,L]
+RewriteRule ^2008/02/08/rolling-your-own-deb-package-getting-secure-vpn-tunneling-on-ubuntu /posts/rolling-your-own-deb-package-getting-secure-vpn-tunneling-on-ubuntu.html [R=301,L]
+RewriteRule ^2008/03/23/wordpress-users-check-your-registered-user-list /posts/wordpress-users-check-your-registered-user-list.html [R=301,L]
+RewriteRule ^2008/03/23/my-foray-into-data-recovery /posts/my-foray-into-data-recovery.html [R=301,L]
+
+RewriteRule ^2013/02/14/responsive-layouts-with-stylus /posts/responsive-layouts-with-stylus.html [R=301,L]

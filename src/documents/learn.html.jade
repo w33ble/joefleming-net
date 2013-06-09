@@ -1,0 +1,16 @@
+---
+layout: page
+title: Learn
+pageOrder: 20
+---
+
+.row
+  .12u
+    section
+      - var topics = getCollection('topics').toJSON()
+      if topics.length
+        each topic in topics
+          h2 topic.title
+          p topic.description
+      else
+        #empty Nothing here :(

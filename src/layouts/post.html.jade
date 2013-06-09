@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+#main
+  .container
+    .row.main-row
+      .9u
+        section
+
+          h1= document.title
+          .date= document.date
+
+          hr
+
+          .post-content!= content
+
+      include includes/sidebar

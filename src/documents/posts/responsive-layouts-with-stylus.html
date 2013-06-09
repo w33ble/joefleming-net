@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Responsive Layouts with Stylus"
+date: 2013-02-14
+---
+
+<p>When I tell people they should be using CSS pre-processors like <a href="http://learnboost.github.com/stylus/">Stylus</a>, <a href="http://sass-lang.com/">Sass</a> or <a href="http://lesscss.org/">Less</a>, I inevitably need to explain why. This can be tricky if you are talking to someone that hasn't used CSS much. Typically, discussions evolve around variables and mixins, and usually that's enough to interest people. More recently though, I've found that using pre-processors makes doing responsive design REALLY easy! I'll focus on Stylus here, but the same applies to the other two as well.</p>
+
+<p>Typically, when someone wants to make a responsive site, they start with a grid system, and their HTML ends up looking like this.</p>
+
+<gist>78d9d087bbb9e28f331a.js?file=divs-as-tables.html</gist>
+
+<p>This is ugly, and a terrible reminder of the days of table layouts. Why should we mix all this layout logic in with our markup? Well, quite simply, we shouldn't! Ideally we'd keep our concerns separated and keep this layout logic in our layout definitions; namely, in our CSS. But writing all this by hand is annoying. Enter pre-processors.</p>
+
+<p>I've been using the <a href="http://semantic.gs">Semantic Grid System</a> lately and I really like the idea. You set your page width as a variable, column count as a variable, and use mixing to specify how many columns an element uses. So then we get back to something like this.</p>
+
+<gist>78d9d087bbb9e28f331a.js?file=divs-with-ids.html</gist>
+
+<gist>78d9d087bbb9e28f331a.js?file=semantic-css-1.css</gist>
+
+<p>Now we're getting somewhere! So what about responsive layouts? Well, the Semantic GS isn't all that suited for the traditional responsive layout (that is, when you look at it on a phone, all "columns" become "rows"), but that's not really such a bad thing. For me, I rarely want my mobile view to be a list of items, I still want some parts side by side. With some clever mixin and variable use, we can do this.</p>
+
+<gist>78d9d087bbb9e28f331a.js?file=responsive.styl</gist>
+
+<p>Here, I define variables for device display sizes and use those variables to control the size of elements on those screens. I also use the hideOn and showOn mixins to hide and show elements on a screen<sup>[1]</sup>. So now, when I view this page on a phone, the content is the only part shown and the sidebar is hidden. I can also use these to specify padding and the like for different displays.</p>
+
+<p><sup>1</sup> This should be expanded to work with more than 2 display sizes, but it's a working example</p>
