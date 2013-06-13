@@ -1,9 +1,17 @@
+cheerio = require 'cheerio'
+
 # DocPad Configuration File
 # http://docpad.org/docs/config
 
 # Define the DocPad Configuration
 docpadConfig =
-  # data to pass to the templates
+  # =================================
+  # Server Configuration
+  port: null  # default
+
+
+  # =================================
+  # Template Configuration
   templateData:
     site:
       title: "JoeFleming.net"
@@ -36,6 +44,13 @@ docpadConfig =
         k += "#{@document.tags},"
 
       k += @site.keywords
+
+    getPostPreview: (post) ->
+      $ = cheerio.load post.contentRenderedWithoutLayouts
+      preview = $('p').first()
+      preview.find('img,script').remove()
+      preview.html()
+
 
   # Collections
   # ===========
