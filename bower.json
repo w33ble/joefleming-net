@@ -4,7 +4,6 @@
   "dependencies": {
     "modernizr": "~2.6.2",
     "normalize-css": "~2.1.2",
-    "semantic-grid": "latest",
     "font-awesome": "~3.1.1",
     "jquery": "~1.9.1",
     "highlightjs": "~7.3.0"
