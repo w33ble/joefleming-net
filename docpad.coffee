@@ -44,31 +44,30 @@ docpadConfig =
   collections:
     # Fetch in all documents that have pageOrder set within their meta data
     # Order by pageOrder: asc, title: asc
-    pages: (database) ->
-      database.findAllLive
-        ignored:
-          $or: [false, undefined, null]
+    pages: ->
+      @getCollection('documents').findAllLive(
         pageOrder:
-          $exists: true,
-        [ pageOrder: 1, title: 1 ]
+          $exists: true
+        , [ pageOrder: 1, title: 1 ]
+      )
 
     # Fetch all posts from directory
     # Order by date: desc
-    posts: (database) ->
-      database.findAllLive
-        ignored:
-          $or: [false, undefined, null]
-        relativeOutDirPath: 'posts',
-        [ date: -1 ]
+    posts: ->
+      @getCollection('documents').findAllLive(
+        relativeOutDirPath:'posts'
+      , [date:-1]
+      ).on 'add', (model) ->
+        model.setMetaDefaults layout:"post"
 
     # Fetch all learning topics from directory
     # Order by date: desc
-    topics: (database) ->
-      database.findAllLive
-        ignored:
-          $or: [false, undefined, null]
-        relativeOutDirPath: 'topics',
-        [ date: -1 ]
+    # topics: (database) ->
+    #   database.findAllLive
+    #     ignored:
+    #       $or: [false, undefined, null]
+    #     relativeOutDirPath: 'topics',
+    #     [ date: -1 ]
 
 # Export the DocPad Configuration
 module.exports = docpadConfig
