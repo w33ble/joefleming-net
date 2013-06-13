@@ -1,0 +1,18 @@
+---
+layout: page
+title: "Old Posts"
+pageOrder: 50
+---
+
+h1 Older Posts
+
+section.recent-posts
+  each post,idx in getCollection('posts').toJSON().splice(12)
+    - var evenOdd = (idx%2) ? 'even' : 'odd'
+    article(class=evenOdd)
+      h2.title
+        a(href=post.url)= post.title
+      .content
+        p!= getPostPreview(post)
+
+        a.button.readmore(href=post.url) Read More
