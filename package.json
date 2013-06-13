@@ -11,7 +11,8 @@
     "docpad-plugin-jade": "~2.3.1",
     "docpad-plugin-stylus": "~2.3.0",
     "docpad-plugin-marked": "~2.1.1",
-    "docpad-plugin-gist": "~2.0.0"
+    "docpad-plugin-gist": "~2.0.0",
+    "grunt-contrib-copy": "~0.4.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

@@ -10,7 +10,7 @@ clean:
 	rm -Rf out
 
 cleanAll:
-	rm -Rf out
 	rm -Rf node_modules
+	rm -Rf components
 	rm -Rf src/files/vendor
-
+	rm -Rf out
