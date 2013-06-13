@@ -26,8 +26,9 @@ module.exports = (grunt) ->
             filter: 'isFile'
           }
           {
-            src: ['components/highlightjs/highlight.pack.js']
-            dest: 'src/files/vendor/'
+            src: ['components/highlightjs/highlight.pack.js',
+              'components/highlightjs/styles/tomorrow-night.css']
+            dest: 'src/files/vendor/highlightjs/'
             expand: true
             flatten: true
             filter: 'isFile'

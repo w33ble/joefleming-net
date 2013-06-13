@@ -1,9 +1,8 @@
 - var scripts = getBlock('scripts')
 - var styles = getBlock('styles')
 
-- styles.add(['/css/normalize.min.css'])
-- scripts.add(['/vendor/jquery/jquery.min.js', '/js/config.js', '/js/skel.min.js', '/js/skel-panels.min.js'])
-- scripts.add(['/vendor/highlightjs/highlight.pack.js'])
+- styles.add(['/css/normalize.min.css', '/vendor/highlightjs/tomorrow-night.css'])
+- scripts.add(['/vendor/jquery.min.js', '/js/skel-config.js', '/js/skel.min.js', '/js/skel-panels.min.js', '/vendor/highlightjs/highlight.pack.js', '/js/site.js'])
 
 !!!
 html(lang="en")
@@ -14,19 +13,13 @@ html(lang="en")
     meta(name="Keywords", content="#{getPageKeywords()}")
     meta(last-updated="#{site.date}")
 
-    != styles.toHTML()
     script(src="/js/modernizr.min.js")
-    link(rel="stylesheet", href="/vendor/highlightjs/styles/tomorrow-night.css")
-    script(src="/vendor/highlightjs/highlight.pack.js")
-    script
-      hljs.tabReplace = '  ';
-      hljs.initHighlightingOnLoad();
+    != styles.toHTML()
 
     noscript
       link(rel="stylesheet", href="/css/skel-noscript.css")
       link(rel="stylesheet", href="/css/style.css")
       link(rel="stylesheet", href="/css/style-desktop.css")
-
 
     title= getPageTitle()
 
@@ -53,5 +46,5 @@ html(lang="en")
               | &copy; #{site.author}. All rights reserved. | Template: 
               a(href="http://html5up.net/minimaxing",target="_blank",ref="ext") HTML5 UP (heavily modified)
 
-  != scripts.toHTML()
-    
+    != scripts.toHTML()
+
