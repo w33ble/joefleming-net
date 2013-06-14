@@ -40,9 +40,13 @@ docpadConfig =
       # Stylesheets
       getStyles: (env) ->
         if env in ['production', 'static']
-          ['/css/site.min.css']
+          [
+            'http://fonts.googleapis.com/css?family=Lato|PT+Sans|Inconsolata|Raleway'
+            '/css/site.min.css'
+          ]
         else
           [
+            'http://fonts.googleapis.com/css?family=Lato|PT+Sans|Inconsolata|Raleway'
             '/vendor/normalize.min.css'
             '/vendor/highlightjs/tomorrow-night.css'
             '/css/site.css'
