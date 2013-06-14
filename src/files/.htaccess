@@ -1,5 +1,7 @@
 RewriteEngine on
 
+RewriteRule ^page /posts [R=301,L]
+
 RewriteRule ^2007/04/09/why-must-computer-oems-suck /posts/why-must-computer-oems-suck.html [R=301,L]
 RewriteRule ^2007/04/12/configuring-access-in-mediawiki /posts/configuring-access-in-mediawiki.html [R=301,L]
 RewriteRule ^2007/04/25/touchpad-speed-in-linux /posts/touchpad-speed-in-linux.html [R=301,L]
