@@ -3,6 +3,3 @@
 node_modules
 out
 components
-src/files/vendor
-src/files/css/normalize.min.css
-src/files/js/modernizr.min.js
