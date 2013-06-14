@@ -20,8 +20,8 @@
 
 @import "../../files/vendor/grid.styl";
 
-column-width = 60px
-gutter-width = 20px
+column-width = 20px
+gutter-width = 60px
 columns = 12
 
 total-width = 100%
@@ -134,12 +134,23 @@ a
 a:hover
   color: lighten(linkColor, 20%)
 
+a.button
+  display: inline-block
+  padding: 10px 20px
+  border-radius()
+  background-color: linkColor
+  color: backgroundColor
+  margin-right: 6px
+
+
 /* Page styles */
 
 #header-wrapper
+  background-color: headerColor
   background: linear-gradient(top, lighten(headerColor, 2%), headerColor)
 
   header
+    background-color: headerAccentColor
     background: linear-gradient(top, lighten(headerAccentColor, 10%), headerAccentColor)
     padding: 0 20px
     clearfix()
@@ -257,6 +268,8 @@ a:hover
 
 @media non-mobile
   #content-wrapper
+    width: 80%
+    margin: 0 auto
     #content
       column(8)
       offset(2)
@@ -280,13 +293,19 @@ a:hover
 #home
   #left
     display: none
+
   #right
     column(12)
+
+  ul
+    list-style: none
+    padding: 0
 
 @media non-mobile
   #home
     #left
       column(4)
+
     #right
       column(8)
 
