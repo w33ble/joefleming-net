@@ -17,7 +17,7 @@ docpadConfig =
   templateData:
     site:
       title: "JoeFleming.net"
-      name: "Joe Fleming dot net"
+      name: "Joe Fleming.net"
       url: "http://joefleming.net"
       author: "Joe Fleming"
       description: "Personal site of Joe Fleming (@w33ble)"
@@ -27,22 +27,26 @@ docpadConfig =
 
       # Scripts
       getScripts: (env) ->
-        if env is 'production'
+        if env in ['production', 'static']
           ['/js/site.min.js']
         else
           [
             # '/vendor/jquery.min.js'
             '/vendor/highlightjs/highlight.pack.js'
             '/js/site.js'
+            "#{env}.js"
           ]
 
       # Stylesheets
-      getStyles: ->
-        [
-          '/vendor/normalize.min.css'
-          '/vendor/highlightjs/tomorrow-night.css'
-          '/css/style.css'
-        ]
+      getStyles: (env) ->
+        if env in ['production', 'static']
+          ['/css/site.min.css']
+        else
+          [
+            '/vendor/normalize.min.css'
+            '/vendor/highlightjs/tomorrow-night.css'
+            '/css/site.css'
+          ]
 
     # Helpers
     # =======

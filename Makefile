@@ -6,6 +6,11 @@ install:
 	npm install
 	bower install
 
+static:
+	rm -Rf out
+	grunt dist
+	docpad generate --env static
+
 clean:
 	rm -Rf out
 

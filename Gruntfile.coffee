@@ -17,10 +17,22 @@ module.exports = (grunt) ->
         ]
         dest: 'src/files/js/site.min.js'
 
+    stylus:
+      site:
+        src: ['src/documents/css/site.css.styl']
+        dest: 'src/files/css/site.min.css'
+
     cssmin:
       normalize:
         src: ['components/normalize-css/normalize.css']
         dest: 'src/files/vendor/normalize.min.css'
+      site:
+        src: [
+          'src/files/vendor/normalize.min.css'
+          'src/files/vendor/highlightjs/tomorrow-night.css'
+          'src/files/css/site.min.css'
+        ]
+        dest: 'src/files/css/site.min.css'
 
     copy:
       components:
@@ -57,6 +69,7 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
+  grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
@@ -66,6 +79,12 @@ module.exports = (grunt) ->
     'uglify:modernizr'
     'cssmin:normalize'
     'copy:components'
+  ]
+
+  grunt.registerTask 'dist', [
+    'vendor'
     'uglify:site'
+    'stylus:site'
+    'cssmin:site'
   ]
 
