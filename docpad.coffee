@@ -31,10 +31,10 @@ docpadConfig =
           ['/js/site.min.js']
         else
           [
+            '/vendor/respond.min.js'
             # '/vendor/jquery.min.js'
             '/vendor/highlightjs/highlight.pack.js'
             '/js/site.js'
-            "#{env}.js"
           ]
 
       # Stylesheets

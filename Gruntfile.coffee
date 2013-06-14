@@ -11,6 +11,7 @@ module.exports = (grunt) ->
         dest: 'src/files/vendor/modernizr.min.js'
       site:
         src: [
+          'src/files/vendor/respond.min.js'
           # 'src/files/vendor/jquery.min.js'
           'src/files/vendor/highlightjs/highlight.pack.js'
           'src/files/js/site.js'
@@ -37,6 +38,13 @@ module.exports = (grunt) ->
     copy:
       components:
         files: [
+          {
+            src: ['components/respond/respond.min.js']
+            dest: 'src/files/vendor/'
+            expand: true
+            flatten: true
+            filter: 'isFile'
+          }
           {
             src: ['components/jquery/jquery.min.js']
             dest: 'src/files/vendor/'

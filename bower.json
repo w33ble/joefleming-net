@@ -6,6 +6,7 @@
     "normalize-css": "~2.1.2",
     "font-awesome": "~3.1.1",
     "jquery": "~1.9.1",
-    "highlightjs": "~7.3.0"
+    "highlightjs": "~7.3.0",
+    "respond": "~1.2.0"
   }
 }
