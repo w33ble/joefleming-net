@@ -33,13 +33,16 @@ pageOrder: 1
   section#right
     h1 Announcements
     each news in getCollection('news').toJSON().slice(0, 3)
-      h3= news.title
-      p.content!= news.contentRenderedWithoutLayouts
+      article.announce
+        h3= news.title
+        div.content!= news.contentRenderedWithoutLayouts
 
-    h1 Latest Blog Post
+    h1 Latest Post
     each post in getCollection('posts').toJSON().slice(0, 1)
-      h3
-        a(href=post.url)= post.title
-      p.content!= getPostPreview(post)
-      div
-        a.button(href=post.url) Read More
+      article.post
+        h3
+          a(href=post.url)= post.title
+        div.content!= getPostPreview(post)
+        div
+          a.button(href=post.url) Read More
+          a.button(href="/posts") View Recent Posts

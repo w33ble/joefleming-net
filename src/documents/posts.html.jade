@@ -14,7 +14,7 @@ pageOrder: 50
         h2.title
           a(href=post.url)= post.title
         .content
-          p!= getPostPreview(post)
+          != getPostPreview(post)
 
           a.button.readmore(href=post.url) Read More
 

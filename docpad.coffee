@@ -80,7 +80,7 @@ docpadConfig =
       $ = cheerio.load post.contentRenderedWithoutLayouts
       preview = $('p').first()
       preview.find('img,script').remove()
-      preview.html()
+      "<p>" + preview.html() + "</p>"
 
 
   # Collections
