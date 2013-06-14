@@ -9,6 +9,13 @@ module.exports = (grunt) ->
           mangle: false
         src: ['components/modernizr/modernizr.js']
         dest: 'src/files/vendor/modernizr.min.js'
+      site:
+        src: [
+          # 'src/files/vendor/jquery.min.js'
+          'src/files/vendor/highlightjs/highlight.pack.js'
+          'src/files/js/site.js'
+        ]
+        dest: 'src/files/js/site.min.js'
 
     cssmin:
       normalize:
@@ -55,4 +62,10 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', ['vendor']
 
-  grunt.registerTask 'vendor', ['uglify:modernizr', 'cssmin:normalize', 'copy:components']
+  grunt.registerTask 'vendor', [
+    'uglify:modernizr'
+    'cssmin:normalize'
+    'copy:components'
+    'uglify:site'
+  ]
+
