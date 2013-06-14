@@ -5,6 +5,7 @@ create:
 install:
 	npm install
 	bower install
+	grunt
 
 static:
 	rm -Rf out
