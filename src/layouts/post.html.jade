@@ -11,18 +11,15 @@ layout: default
 - if (day.length < 2)
   day = '0' + day
 
-#main
-  .container
-    .row.main-row
-      .9u
-        section
+#content
+  section#post
 
-          h1= document.title
-          .date Posted: 
-            = d.getFullYear() + '-' + month + '-' + day
+    h1= document.title
+    .date Posted: 
+      = d.getFullYear() + '-' + month + '-' + day
 
-          hr
+    hr
 
-          .post-content!= content
+    .post-content!= content
 
-      include includes/sidebar
+include includes/sidebar

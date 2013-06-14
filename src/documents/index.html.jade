@@ -4,38 +4,42 @@ title: Home
 pageOrder: 1
 ---
 
-#banner-wrapper
-  .container
-    .row.main-row
-      .4u
-        section
-          div.profile
-            img(src="images/headshot.png", alt="Joe Fleming", class="left")
-            ul
-              li I Develop for the Web
-              li Frontend and Backend
-              li Enjoying Node.js
-      .8u
-        section
-          div Some more content over here
+//- #hero
+//-   section.profile 
+//-     div I Develop for the Web. 
+//-     div Frontend and Backend. 
+//-     div Currently Enjoying Node.js.
+//-   section
+//-     div Content here
+//-   section
+//-     div Other content here
 
-#main
-  .container
-    .row.main-row
-      .4u
-        section
-          h2 Current Projects
-          ul.link-list
-            li
-              a(href="#") Project 1
-              a(href="#") Project 2
-              a(href="#") Project 3
-      .8u
-        section
-          h2 Latest Blog Post
-          each post,idx in getCollection('posts').toJSON()
-            if (idx === 0)
-              h3= post.title
-              p.content!= post.contentRenderedWithoutLayouts
-              div
-                a.button(href=post.url) Read More
+#home
+  section#left
+    h2 Active Github Repos
+    ul.link-list
+      - for repo in feedr.feeds['github-repos']
+        li
+          a(href=repo.html_url) #{repo.full_name} 
+          | (#{repo.language})
+
+    h2 Starred Github Repos
+    ul.link-list
+      - for repo in feedr.feeds['github-starred']
+        li
+          a(href=repo.html_url) #{repo.full_name} 
+          | (#{repo.language})
+
+  section#right
+    h1 Announcements
+    each news in getCollection('news').toJSON().slice(0, 3)
+      h3= news.title
+      p.content!= news.contentRenderedWithoutLayouts
+
+    h1 Latest Blog Post
+    each post in getCollection('posts').toJSON().slice(0, 1)
+      h3
+        a(href=post.url)= post.title
+      p.content!= getPostPreview(post)
+      div
+        a.button(href=post.url) Read More

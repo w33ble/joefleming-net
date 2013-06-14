@@ -8,6 +8,7 @@ docpadConfig =
   # =================================
   # Server Configuration
   port: null  # default
+  regenerateEvery: 1000*60*60 # hour
 
 
   # =================================
@@ -75,6 +76,14 @@ docpadConfig =
       ).on 'add', (model) ->
         model.setMetaDefaults layout:"post"
 
+    # Fetch all posts from directory
+    # Order by date: desc
+    news: ->
+      @getCollection('documents').findAllLive(
+        relativeOutDirPath:'news'
+      , [date:-1]
+      )
+
     # Fetch all learning topics from directory
     # Order by date: desc
     # topics: (database) ->
@@ -83,6 +92,22 @@ docpadConfig =
     #       $or: [false, undefined, null]
     #     relativeOutDirPath: 'topics',
     #     [ date: -1 ]
+
+
+  # ===========
+  # Plugins
+
+  plugins:
+    feedr:
+      timeout: 1000*60*10
+      feeds:
+        'github-starred':
+          url: "https://api.github.com/users/w33ble/starred?page=0&per_page=5&sort=date"
+        "github-repos":
+          url: "https://api.github.com/users/w33ble/repos?page=0&per_page=5&sort=pushed"
+
+
+
 
 # Export the DocPad Configuration
 module.exports = docpadConfig
