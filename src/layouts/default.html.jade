@@ -1,22 +1,17 @@
-- var scripts = getBlock('scripts')
-- var styles = getBlock('styles')
-
-- styles.add(['/css/normalize.min.css', '/css/style.css'])
-- scripts.add(['/vendor/jquery.min.js', '/vendor/highlightjs/highlight.pack.js', '/js/site.js'])
-
 !!!
 html(lang="en")
   head
     meta(charset="utf-8")
     meta(http-equiv="content-type", content="text/html; charset=utf-8")
-    meta(name="Description", content="#{getPageDescription()}")
-    meta(name="Keywords", content="#{getPageKeywords()}")
+    meta(name="Description", content="#{getPreparedDescription()}")
+    meta(name="Keywords", content="#{getPreparedKeywords()}")
     meta(last-updated="#{site.date}")
+    != getBlock('meta').toHTML()
 
-    script(src="/js/modernizr.min.js")
-    != styles.toHTML()
+    title= getPreparedTitle()
 
-    title= getPageTitle()
+    script(src="/vendor/modernizr.min.js")
+    != getBlock('styles').add(site.getStyles(getEnvironment())).toHTML()
 
   body
     #body-wrapper
@@ -40,5 +35,5 @@ html(lang="en")
       footer
         #copyright &copy; #{site.author}. All rights reserved.
 
-    != scripts.toHTML()
+    != getBlock('scripts').add(site.getScripts(getEnvironment())).toHTML()
 

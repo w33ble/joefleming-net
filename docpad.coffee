@@ -1,4 +1,5 @@
 cheerio = require 'cheerio'
+fs = require 'fs'
 
 # DocPad Configuration File
 # http://docpad.org/docs/config
@@ -19,27 +20,48 @@ docpadConfig =
       name: "Joe Fleming dot net"
       url: "http://joefleming.net"
       author: "Joe Fleming"
-      description: "Witty site description"
-      keywords: "blah..."
+      description: "Personal site of Joe Fleming (@w33ble)"
+      keywords: """
+        consulting, web development, development, open source, blog, node.js, javascript
+        """
+
+      # Scripts
+      getScripts: (env) ->
+        if env is 'production'
+          ['/js/site.min.js']
+        else
+          [
+            # '/vendor/jquery.min.js'
+            '/vendor/highlightjs/highlight.pack.js'
+            '/js/site.js'
+          ]
+
+      # Stylesheets
+      getStyles: ->
+        [
+          '/vendor/normalize.min.css'
+          '/vendor/highlightjs/tomorrow-night.css'
+          '/css/style.css'
+        ]
 
     # Helpers
     # =======
     # Functions available in the templates
 
     #
-    getPageTitle: ->
+    getPreparedTitle: ->
       if @document.title
         "#{@site.title} | #{@document.title}"
       else
         @site.title
 
-    getPageDescription: ->
+    getPreparedDescription: ->
       if @document.description
         @document.description
       else
         @site.description
 
-    getPageKeywords: ->
+    getPreparedKeywords: ->
       k = ''
       if @document.tags
         k += "#{@document.tags},"
