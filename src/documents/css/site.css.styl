@@ -14,7 +14,7 @@
 
 /* Fonts */
 
-@import url("http://fonts.googleapis.com/css?family=Lato|Lora|Inconsolata");
+@import url("http://fonts.googleapis.com/css?family=Lato|PT+Sans|Inconsolata|Raleway");
 
 /* Semantic GS */
 
@@ -30,19 +30,19 @@ total-width = 100%
 /* Variables */
 
 backgroundColor = #ffffff
-textColor = #40442F
+textColor = #1C140D
 
-headerColor = #25E400
-headerAccentColor = #189300
+headerColor = #CBE86B
+headerAccentColor = #1C140D
 
-heroColor = #DEFCAB
-heroAccentColor = #E0FFC4
+heroColor = #1C140D
+heroAccentColor = #F2E9E1
 
-footerColor = #DAE5A0
-footerAccentColor = #B1BA82
+footerColor = #F2E9E1
+footerAccentColor = #F2E9E1
 
-headingColor = headerAccentColor
-linkColor = #96B011
+headingColor = #9FB554
+linkColor = lighten(textColor, 20%)
 
 // Device definitions
 non-mobile = "(min-width: 721px)"
@@ -83,7 +83,7 @@ border-radius(radius = 10px)
 body
   font-size: 16px
   background-color: backgroundColor
-  font-family: "Lato", sans-serif
+  font-family: "PT Sans", sans-serif
   color: textColor
   line-height: 1.6em
   padding: 0
@@ -109,7 +109,7 @@ img
   border: 0
 
 h1,h2,h3,h4,h5,h6
-  font-family: "Lora", sans-serif
+  font-family: "Lato", sans-serif
   color: headingColor
   margin-top: 0
   padding-top: 0
@@ -120,6 +120,9 @@ h1,h2,h3,h4,h5,h6
 h1
   font-size: 1.8em
   text-decoration: underline
+  color: headerAccentColor
+  a
+    color: headerAccentColor
 h2
   font-size: 1.6em
 
@@ -185,6 +188,7 @@ a:hover
       h1.text
         display: block
       h1
+        font-family: "Raleway", sans-serif
         margin-top: 4px
         img
           width: 64px
@@ -275,9 +279,21 @@ a:hover
 
 #home
   #left
-    column(4)
+    display: none
   #right
-    column(8)
+    column(12)
+
+@media non-mobile
+  #home
+    #left
+      column(4)
+    #right
+      column(8)
+
+@media standard
+  #home
+    #left
+      font-size: 0.8em
 
 // Portfolio Page
 #portfolio section
