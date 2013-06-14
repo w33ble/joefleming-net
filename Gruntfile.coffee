@@ -39,6 +39,13 @@ module.exports = (grunt) ->
             dest: 'src/files/vendor/font-awesome/'
             expand: true
           }
+          {
+            src: ['components/semantic-grid/stylesheets/styl/grid.styl']
+            dest: 'src/files/vendor/'
+            expand: true
+            flatten: true
+            filter: 'isFile'
+          }
         ]
 
   grunt.loadNpmTasks 'grunt-contrib-uglify'
