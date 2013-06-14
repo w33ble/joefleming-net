@@ -19,6 +19,7 @@
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
+    "install": "bower install && grunt",
     "start": "node_modules/docpad/bin/docpad-server"
   },
   "devDependencies": {
