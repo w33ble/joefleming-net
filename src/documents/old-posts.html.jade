@@ -13,7 +13,10 @@ title: "Old Posts"
         h2.title
           a(href=post.url)= post.title
         .content
-          p!= getPostPreview(post)
+          - if (post.icon)
+            img(src="/images/icons/#{post.icon}.jpg").icon
+
+          != getPostPreview(post)
 
           a.button.readmore(href=post.url) Read More
 
