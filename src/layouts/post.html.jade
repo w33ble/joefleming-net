@@ -20,7 +20,11 @@ layout: default
 
     hr
 
-    .post-content!= content
+    .post-content
+      - if (document.icon)
+        img(src="/images/icons/#{document.icon}.jpg").icon
+
+      != content
 
     a(href="/posts") Back to posts
 
