@@ -19,6 +19,6 @@ Docpad also has [renderers](http://docpad.org/docs/plugins#renderers) to render 
 
 There's also [helpers](http://docpad.org/docs/plugins#helpers) for a ton of different things. I'm using Feedr on my site to pull in Github info, and will eventually add my Twitter feed (and perhaps other stuff) and have the site update every hour.
 
-So, all that to say, Wordpress is finally history. No more updates to install and no more slow page loads.
+So, all that to say, Wordpress is finally history. No more updates to install and no more slow page loads. And if you want to see what it looks like, check out [the repo](https://github.com/w33ble/joefleming-net).
 
 I couldn't be happier!
