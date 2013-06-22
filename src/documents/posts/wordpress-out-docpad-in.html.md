@@ -1,7 +1,7 @@
 ---
 title: "Wordpress is out, Docpad is in"
 date: 2013-06-15
-tags: "website, docpad, wordpress, node.js, software"
+tags: "website, docpad, wordpress, node.js, software, javascript, coffeescript"
 icon: docpad
 ---
 
