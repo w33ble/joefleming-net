@@ -2,21 +2,12 @@
 layout: default
 ---
 
-//- 0 pad the month and day
-- var d = new Date(document.date)
-- var month = d.getMonth()+1+''
-- if (month.length < 2)
-  month = '0' + month
-- var day = d.getUTCDate()+''
-- if (day.length < 2)
-  day = '0' + day
-
 #content
   section#post
 
     h1= document.title
     .date Posted: 
-      = d.getFullYear() + '-' + month + '-' + day
+      = moment(document.date).format("MMM Do, YYYY")
 
     hr
 

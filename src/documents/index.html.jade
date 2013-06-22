@@ -31,11 +31,13 @@ pageOrder: 1
           | (#{repo.language})
 
   section#right
-    h1 Announcements
-    each news in getCollection('news').toJSON().slice(0, 3)
-      article.announce
-        h3= news.title
-        div.content!= news.contentRenderedWithoutLayouts
+    - var news = getCollection('news').toJSON()
+    - if (news.length)
+      h1 Announcements
+      each item in news.slice(0, 3)
+        article.announce
+          h3= item.title
+          div.content!= item.contentRenderedWithoutLayouts
 
     h1 Latest Post
     each post in getCollection('posts').toJSON().slice(0, 1)

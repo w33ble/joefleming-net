@@ -1,4 +1,5 @@
 cheerio = require 'cheerio'
+moment = require 'moment'
 fs = require 'fs'
 
 # DocPad Configuration File
@@ -56,6 +57,8 @@ docpadConfig =
     # =======
     # Functions available in the templates
 
+    moment: moment
+
     #
     getPreparedTitle: ->
       if @document.title
@@ -111,6 +114,10 @@ docpadConfig =
     news: ->
       @getCollection('documents').findAllLive(
         relativeOutDirPath:'news'
+        date:
+          $lte: moment().subtract('hours', 7)
+        expires:
+          $gte: moment().subtract('hours', 7)
       , [date:-1]
       )
 

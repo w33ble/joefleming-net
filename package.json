@@ -15,7 +15,8 @@
     "docpad-plugin-livereload": "~2.4.0",
     "docpad-plugin-feedr": "~2.5.0",
     "cheerio": "~0.12.0",
-    "marked": "~0.2.9"
+    "marked": "~0.2.9",
+    "moment": "~2.0.0"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
