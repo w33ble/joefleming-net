@@ -44,7 +44,11 @@ pageOrder: 1
       article.post
         h3
           a(href=post.url)= post.title
-        div.content!= getPostPreview(post)
+        div.content
+          - if (post.icon)
+            img(src="/images/icons/#{post.icon}.jpg").icon
+
+          != getPostPreview(post)
         div
           a.button(href=post.url) Read More
           a.button(href="/posts") View Recent Posts
