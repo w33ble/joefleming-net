@@ -16,3 +16,5 @@ Lazy.js's speed is really impressive, but you should also notice that Lo-Dash is
 Yes, Lazy.js consistently smokes Lo-Dash, but there's no mention of it being usable in place of Underscore, let alone tested for compatibility. On the other hand, Lo-Dash consitantly smokes Underscore and *is* fully tested and compatible with it.
 
 There's no contest here. If you're using Underscore, anywhere (Node.js included), spend a few minutes right now and switch over to Lo-Dash. There's no reason not to, and a few great reasons (speed being the best) that you should!
+
+UPDATE: John-David Dalton, author of Lo-Dash, and JS speed fanatic, [tweeted me](https://twitter.com/jdalton/status/348271845549678592) to point out that lazy evaluation may be [coming to Lo-Dash](https://github.com/bestiejs/lodash/issues/274) in the future. Quite exciting!
