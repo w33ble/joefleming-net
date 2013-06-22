@@ -20,3 +20,6 @@ cleanAll:
 	rm -Rf components
 	rm -Rf src/files/vendor
 	rm -Rf out
+
+deploy:
+	rsync -aP out/ ssh.joefleming.net:joefleming.net/
