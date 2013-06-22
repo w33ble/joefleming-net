@@ -105,6 +105,8 @@ docpadConfig =
     posts: ->
       @getCollection('documents').findAllLive(
         relativeOutDirPath:'posts'
+        date:
+          $lte: moment().subtract('hours', 7)
       , [date:-1]
       ).on 'add', (model) ->
         model.setMetaDefaults layout:"post"
