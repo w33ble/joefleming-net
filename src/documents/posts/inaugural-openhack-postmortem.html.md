@@ -65,4 +65,4 @@ Lastly, I want to state a couple of broad plans I have for OpenHackPHX, mostly s
 
 ## Conclusion
 
-That's everything. Thanks again to everyone who helped make OpenHack happen, and if you're interested in helping out, know of a space we could use for future OpenHacks or would like to sponsor one, [please contact me](mailto:openhackphx@gmail.com).
+That's everything. I hope I can keep the momentum going and make the next one just as successful. Thanks again to everyone who helped make OpenHack happen, and if you're interested in helping out, know of a space we could use for future OpenHacks or would like to sponsor one, [please contact me](mailto:openhackphx@gmail.com).
