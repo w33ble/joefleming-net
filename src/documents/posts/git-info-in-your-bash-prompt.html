@@ -12,7 +12,7 @@ icon: git
 
 <p>Pretty boss, right?! He told me it was part of <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> and that I needed to install that ASAP. Being a long-time user and fan of bash, and someone who does a fair amount of bash scripting on the shell directly, I was hesitant to switch because it would mean learning a new scripting language. It occurred to me, however, that there was likely a way to get the same thing in bash.</p>
 
-<p>A cursory look revealed <a href="https://github.com/revans/bash-it">bash-it</a>, which claimed to be "shameless ripoff of oh-my-zsh." Perfect! Unfortunately, not so much. Most of the stuff that it offered I didn't want, and using it would mean more modifications to my <a href="https://github.com/w33ble/dotfiles">dotfiles</a>. But, the git part <em>did</em> work, and it was easy to copy too.</p>
+<p>A cursory look revealed <a href="https://github.com/revans/bash-it">bash-it</a>, which claimed to be "shameless ripoff of oh-my-zsh." Perfect! Unfortunately, not so much. Most of the stuff that it offered I didn't want, and using it would mean more modifications to my <a href="https://github.com/w33ble/dotfiles">dotfiles</a>. But, the git part <em>did</em> work, and it was easy to copy.</p>
 
 <p>Here's how to add it to your own bash shell. Add this code to your .bash_profile or .bashrc (all these years in Linux and I still don't know the difference) and you're set.</p>
 
@@ -27,9 +27,9 @@ icon: git
 <pre><code>export PS1="\u@\h : \w \$(parse_git_branch) $ "
 </code></pre>
 
-<p>Yours likely looks different than mone, but the important bit is <strong>\$(parse_git_branch)</strong>. If you don't have a PS1 set, you can copy and paste that one. Now, when you enter a path that is a git repo, it'll show the branch you're currently using in the prompt. Sounds quite simple, but it's really handy, especially if you do your git work on the command line!</p>
+<p>Yours likely looks different than mine, but the important bit is <strong>\$(parse_git_branch)</strong>. If you don't have a PS1 set, you can copy and paste that one. Now, when you enter a path that is a git repo, it'll show the branch you're currently using in the prompt. Sounds quite simple, but it's really handy, especially if you do your git work on the command line!</p>
 
-<p>But what if you want the prompt to also show you if you've got uncommitted changes, untracked files or even if you haven't pushed your changes to remote? Fortunately, that's all pretty easy to add too! Check it...</p>
+<p>But what if you want the prompt to also show you if you've got uncommitted changes, untracked files or even if you haven't pushed your changes to remote? Fortunately, that's all pretty easy to add too! Check it:</p>
 
 <pre><code>function parse_git_branch {
     git rev-parse --git-dir > /dev/null 2>&1
@@ -80,3 +80,5 @@ icon: git
     fi
     return
 }</code></pre>
+
+<p>One word of warning; if you have a repo with a lot of files in it, this will run pretty slow. But, there you have it. Hope that helps!</p>
