@@ -16,7 +16,7 @@ I was hoping to see some people teaming up for projects, and while this didn't h
 
 ## Attendance
 
-There were 25-30 people that came by, definitely on the high side of my expectations. I knew maybe half of the attendees from other groups, but it was great to meet developers I wouldn't find in my normal circles. Skill sets and interests were all over the place, and the youngest attendee I think was 15!
+There were 25-30 people that came by, definitely on the high side of my expectations. I knew maybe half of the attendees from other groups, but it was great to meet developers I wouldn't find in my normal circles. Skill sets and interests were all over the place, and the youngest attendee I think was 15! (UPDATE: he's 14, it was [@hoobdeebla](https://twitter.com/hoobdeebla))
 
 One of my main goals with OpenHack was to get a healthy mix of different developers to hang out, so I hope that continues.
 
