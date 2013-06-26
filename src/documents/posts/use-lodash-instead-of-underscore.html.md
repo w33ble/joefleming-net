@@ -3,6 +3,7 @@ title: Use Lo-Dash Instead of Underscore
 date: 2013-06-21
 tags: "software, web development, javascript"
 icon: javascript
+hn-discuss: https://news.ycombinator.com/item?id=5943378
 ---
 
 I've been using [Lo-Dash](http://lodash.com/) in place of underscore for a while now, because it's faster, it has AMD support, and it has extra functionality that Underscore lacks. Because it's 100% compatible, if I have a library that requires Underscore (Backbone, for example) or an existing code base that already uses Underscore, I get all that performance for free just by dropping Lo-Dash in its place. That's great!

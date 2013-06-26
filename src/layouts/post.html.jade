@@ -17,8 +17,14 @@ layout: default
 
       != content
 
-      .follow
-        a(href="https://twitter.com/w33ble") Follow me on Twitter
+      .actions
+        - if (document['hn-discuss'])
+          span.discuss
+            a(href=document['hn-discuss']) Discuss on HN
+          |  | 
+
+        span.follow
+          a(href="https://twitter.com/w33ble") Follow me on Twitter
 
     a(href="/posts") Back to posts
 
