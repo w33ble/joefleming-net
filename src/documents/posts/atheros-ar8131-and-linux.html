@@ -10,7 +10,8 @@ tags: "ubuntu, software, linux"
 <p>Google will give you a plethora of guides for compiling the drivers (<a href="http://ubuntuforums.org/showthread.php?t=1255082">this one is probably the best</a>), but I just couldn't get things to load. It was also never clear what version of the drivers I should be trying to run. Most tutorials made reference to 1.0.0.9, some to 1.0.0.10, but the current version (at the time of this writing) is 1.0.1.9. In the end, though, that's the version I did manage to get working. Here's how I did it:</p>
 
 <ul>
-	<li>Grab the driver from the <del datetime="2011-08-09T18:42:49+00:00"><a href="http://partner.atheros.com/Drivers.aspx">Atheros site</a></del> Dead link, <a href="/files/AR81Family-Linux-v1.0.1.9.tar.gz">copy is here</a></li>
+	<li>Grab the v1.0.1.9 driver from the <del datetime="2011-08-09T18:42:49+00:00"><a href="http://partner.atheros.com/Drivers.aspx">Atheros site</a></del> Dead link, <a href="/files/AR81Family-Linux-v1.0.1.9.tar.gz">copy is here</a></li>
+  <li>UPDATE: <a href="/files/AR81Family-linux-v1.0.1.14.zip">version 1.0.1.14</a></li>
 	<li>Locate the file on your computer, then make a new directory (name it anything, <em>AR8131</em> will work) and move that file there
 </li>
 	<li>Decompress the file</li>
@@ -23,6 +24,8 @@ tags: "ubuntu, software, linux"
 sudo modprobe atl1e
 sudo ifconfig eth1 up
 sudo dhclient eth1</code></pre>
+
+<p>UPDATE: If you're getting an error saying <code>missing autoconf.h</code>, try following the instructons <a href="http://ubuntuforums.org/showthread.php?t=1597605&p=10049520#post10049520">from this post</a>. It's kind of a dirty hack, but it works.</p>
 
 <p>At this point, the machine will try to assign an IP address for the card. This may or may not work; for me, it did not. To get mine working, I simply restarted the networking init script. Before that though, let's add the following to <em>/etc/network/interfaces</em></p>
 <pre><code># The secondary network interface
