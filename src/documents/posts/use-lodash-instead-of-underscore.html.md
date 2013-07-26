@@ -1,7 +1,7 @@
 ---
 title: Use Lo-Dash Instead of Underscore
 date: 2013-06-21
-tags: "software, web development, javascript"
+tags: software, web development, javascript, backbone, lodash
 icon: javascript
 hn-discuss: https://news.ycombinator.com/item?id=5943378
 ---
