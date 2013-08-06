@@ -1,7 +1,7 @@
 ---
 title: Grunt, for a Painless Build Process
 date: 2013-04-27
-tag: software, development, web development
+tag: software, development, web development, node, grunt
 ---
 
 In the world of web development, build processes are becoming a must. For one thing, abstractions are quickly becoming the norm, particularly with CSS, because Less, Sass and Stylus offer so much more than vanilla CSS that they are worth adding a build process just to use them.
