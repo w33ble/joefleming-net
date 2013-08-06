@@ -8,9 +8,9 @@ Last night was the second [OpenHackPHX](http://openhackphx.com), and once again,
 
 ## The Format
 
-There weren't nearly as many people that came to this OpenHack (which I'll discuss in the Attendance section), so there were only 1 or 2 small groups of conversations before we did intros, and eventually it just formed in to 1 small circle. This made the introductions a little redundant, as pretty much everyone introduced themselves to everyone else already, but it did give everyone a chance to say what they were working on. It also acted as a signal to "start doing stuff" and not just stand around talking the whole time. And, once again, after the intros, the event was mostly hands off.
+There weren't nearly as many people that came to this OpenHack most attendees had introduced themselves before we got started. This made the introductions a little redundant, but it did give everyone a chance to say what they were working on. It also acted as a signal to "start doing stuff" and not just stand around talking the whole time. And, once again, after the intros, the event was mostly hands off.
 
-One of the attendees was working through the Code School course on HTML and CSS and he managed to get some help with that, both from me and from another attendee. I'd still like to see more pairing and impromptu projects come of this, but the group was small this time, so I'm not surprised that it didn't happen.
+One of the attendees was working through the Code School course on HTML and CSS and he managed to get some help with that, both from me and from another attendee. I'd still like to see more pairing and impromptu projects come of OpenHack, but the group was small this time, so I'm not surprised that it didn't happen.
 
 ## Attendance
 
@@ -48,18 +48,18 @@ People seemed a lot more production this time around, which was cool. We still h
 
 ## Other Thoughts
 
-I'm beginning to think that moving the location every time might start to discourage attendees, but I guess we'll see how it goes. Regardless, OpenHack #003 is already [scheduled](http://nextplex.com/phoenix-az/calendar/events/8959-openhack-003) for Gangplank Chandler, and #004 will most likely happen at desarrollo, also in Chandler.
+OpenHack #003 is already [scheduled](http://nextplex.com/phoenix-az/calendar/events/8959-openhack-003) for Gangplank Chandler, and #004 will most likely happen at desarrollo, also in Chandler.
 
-Some other planned locations, assuming I can make them happen:
+For now, I plan to have it in a new space every month, with the goal of including as many people as possible and exposing them to as many cool places in the valley as possible. Some other locations I like to have an OpenHack at, assuming I can make them happen, include:
 
 - AREA48 in Tempe
-- Axosoft in Scottsdale (the only contact I had up there hasn't really gotten back to me)
+- Axosoft in Scottsdale (the only place I know up northing, the only contact I had hasn't gotten back to me)
 - CoHoots in Phoenix (this may not be feasible)
 
-I'm hearing some rumblings of other spaces available too, and I'll need to keep up on those. If you can help me host at any of these places, have a contact at any of them that you can share, or know of another cool space we can use, [please email me](mailto:openhackphx@gmail.com).
+I'm hearing some rumblings of other available spaces too, so that list may get added to. If you can help me host at any of these places, have a contact at any of them that you can share, or know of another cool space we can use, [please email me](mailto:openhackphx@gmail.com).
 
 ## Conclusion
 
-Two OpenHacks down, another already [scheduled](http://nextplex.com/phoenix-az/calendar/events/8959-openhack-003) and another in the works. And all the feedback I've gotten has been realy positive, which is encouraging.
+Two OpenHacks down, another already [scheduled](http://nextplex.com/phoenix-az/calendar/events/8959-openhack-003) and another in the works. And all the feedback I've gotten has been really positive, which is encouraging.
 
-As alwasys, if you're interested in helping out, know of a space we could use for future OpenHacks or would like to be a sponsor, [please email me](mailto:openhackphx@gmail.com).
+As always, if you're interested in helping out, know of a space we could use for future OpenHacks or would like to be a sponsor, [email me](mailto:openhackphx@gmail.com).
