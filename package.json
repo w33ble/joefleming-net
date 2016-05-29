@@ -9,6 +9,7 @@
     "npm": "^2.15.1"
   },
   "dependencies": {
+    "dotenv": "~2.0.0",
     "handlebars": "~4.0.5",
     "metalsmith": "~2.1.0",
     "metalsmith-collections": "~0.7.0",
