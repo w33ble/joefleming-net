@@ -5,6 +5,7 @@ var filter = require('metalsmith-filter');
 var layouts = require('metalsmith-layouts');
 var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
+var server = require('./lib/server');
 var sass = require('./lib/sass');
 var permalinks = require('./lib/permalinks');
 
@@ -17,6 +18,8 @@ metalsmith(__dirname)
 })
 .source('src/')
 .destination('build/')
+.use(server.serve())
+.use(server.watch())
 .use(filter(['**', '!**/.DS_Store']))
 .use(sass())
 .use(collections({
