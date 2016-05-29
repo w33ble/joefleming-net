@@ -16,8 +16,8 @@ metalsmith(__dirname)
   generator: "Metalsmith",
   url: "http://www.metalsmith.io/",
 })
-.source('src/')
-.destination('build/')
+.source('src')
+.destination('build')
 .use(server.serve())
 .use(server.watch())
 .use(filter(['**', '!**/.DS_Store']))
