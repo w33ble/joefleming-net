@@ -1,6 +1,7 @@
 require('dotenv');
 
 var metalsmith = require('metalsmith');
+var filter = require('metalsmith-filter');
 var layouts = require('metalsmith-layouts');
 var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
@@ -16,6 +17,7 @@ metalsmith(__dirname)
 })
 .source('src/')
 .destination('build/')
+.use(filter(['**', '!**/.DS_Store']))
 .use(sass())
 .use(collections({
   posts: 'content/posts/*',
