@@ -1,4 +1,4 @@
-require('dotenv');
+require('dotenv').load();
 
 var metalsmith = require('metalsmith');
 var filter = require('metalsmith-filter');
