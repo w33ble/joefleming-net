@@ -4,6 +4,7 @@ var metalsmith = require('metalsmith');
 var layouts = require('metalsmith-layouts');
 var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
+var sass = require('./lib/sass');
 var permalinks = require('./lib/permalinks');
 
 metalsmith(__dirname)
@@ -15,6 +16,7 @@ metalsmith(__dirname)
 })
 .source('src/')
 .destination('build/')
+.use(sass())
 .use(collections({
   posts: 'content/posts/*',
   news: 'content/news/*',
