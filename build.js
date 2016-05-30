@@ -37,12 +37,13 @@ var buildsteps = metalsmith(__dirname)
 .use(snippet({
   maxLength: 300,
   stripHtml: true,
-}))
-.use(permalinks());
+}));
 
 buildsteps = layouts(buildsteps);
 
-buildsteps.build(function(err, files) {
+buildsteps
+.use(permalinks())
+.build(function(err, files) {
   if (err) { throw err; }
   console.log('Build complete');
 });
