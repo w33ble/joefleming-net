@@ -1,5 +1,5 @@
 ---
-title: Use Lo-Dash Instead of Underscore
+title: Use Lodash Instead of Underscore
 date: 2013-06-21
 tags: software, web development, javascript, backbone, lodash
 icon: javascript
