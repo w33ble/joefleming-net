@@ -1,0 +1,15 @@
+{{#each (limit collections.posts 0 5)}}
+  <section>
+    <header>
+      <h2>{{ title }}</h2>
+      {{#if description }}<p>{{ description }}</p>{{/if}}
+      <p>{{ date }}</p>
+    </header>
+
+    <p>{{{ snippet }}}</p>
+
+    <ul class="actions">
+      <li><a href="/strata" class="button">Read More</a></li>
+    </ul>
+  </section>
+{{/each}}
