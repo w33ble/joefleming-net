@@ -2,14 +2,14 @@ require('dotenv').load();
 
 var metalsmith = require('metalsmith');
 var filter = require('metalsmith-filter');
-var layouts = require('metalsmith-layouts');
 var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
 var server = require('./lib/server');
 var sass = require('./lib/sass');
 var permalinks = require('./lib/permalinks');
+var layouts = require('./lib/layouts');
 
-metalsmith(__dirname)
+var buildsteps = metalsmith(__dirname)
 .metadata({
   title: "joefleming.net",
   description: "My personal site and blog.",
@@ -26,15 +26,19 @@ metalsmith(__dirname)
   news: 'content/news/*',
 }))
 .use(markdown())
-.use(permalinks())
-.use(layouts({
-  engine: 'handlebars',
-  directory: 'layouts',
-  default: 'default.html',
-  partials: 'layouts/partials',
-  pattern: ['**/*.md', '**/*.html'],
-}))
-.build(function(err, files) {
+.use(permalinks());
+
+buildsteps = buildsteps.use(function (files, ms, done) {
+  for (file in files) {
+    if (file === 'posts/git-flow/index.html')
+      console.log(file, files[file])
+  }
+  done();
+})
+
+buildsteps = layouts(buildsteps);
+
+buildsteps.build(function(err, files) {
   if (err) { throw err; }
   console.log('Build complete');
 });

@@ -1,5 +1,5 @@
 ---
-template: index.html
+layout: index.html
 ---
 
-Content goes here...
+Content goes here, ok?
