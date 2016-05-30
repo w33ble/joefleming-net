@@ -8,6 +8,7 @@ var server = require('./lib/server');
 var sass = require('./lib/sass');
 var permalinks = require('./lib/permalinks');
 var layouts = require('./lib/layouts');
+var snippet = require('metalsmith-snippet')
 
 var buildsteps = metalsmith(__dirname)
 .metadata({
@@ -26,6 +27,10 @@ var buildsteps = metalsmith(__dirname)
   news: 'content/news/*',
 }))
 .use(markdown())
+.use(snippet({
+  maxLength: 300,
+  stripHtml: true,
+}))
 .use(permalinks());
 
 buildsteps = buildsteps.use(function (files, ms, done) {
