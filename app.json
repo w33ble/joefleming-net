@@ -1,0 +1,9 @@
+{
+    "name": "joefleming.net",
+    "script": "build.js",
+    "max_memory_restart": "100M",
+    "env": {
+        "NODE_ENV": "production",
+        "PORT": 8082
+    }
+}
