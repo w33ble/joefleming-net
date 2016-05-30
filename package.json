@@ -24,8 +24,8 @@
   },
   "scripts": {
     "start": "nodemon -e js,md,html,scss --ignore build/ build",
-    "build": "NODE_ENV=build npm start",
-    "prod": "NODE_ENV=production npm start"
+    "build": "NODE_ENV=build node build",
+    "prod": "NODE_ENV=production node build"
   },
   "devDependencies": {
     "mime": "~1.3.4",
