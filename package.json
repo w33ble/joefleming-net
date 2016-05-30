@@ -1,6 +1,6 @@
 {
   "name": "joefleming.net",
-  "version": "2.1.3",
+  "version": "2.2.0",
   "private": true,
   "description": "a static website",
   "main": "index.js",
