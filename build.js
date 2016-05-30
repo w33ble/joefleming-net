@@ -40,14 +40,6 @@ var buildsteps = metalsmith(__dirname)
 }))
 .use(permalinks());
 
-buildsteps = buildsteps.use(function (files, ms, done) {
-  for (file in files) {
-    if (file === 'posts/git-flow/index.html')
-      console.log(file, files[file])
-  }
-  done();
-})
-
 buildsteps = layouts(buildsteps);
 
 buildsteps.build(function(err, files) {
