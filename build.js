@@ -16,6 +16,11 @@ var buildsteps = metalsmith(__dirname)
   description: "My personal site and blog.",
   generator: "Metalsmith",
   url: "http://www.metalsmith.io/",
+  site: {
+    title: 'joefleming.net',
+    url: 'http://joefleming.net',
+    author: 'Joe Fleming',
+  },
 })
 .source('src')
 .destination('build')
