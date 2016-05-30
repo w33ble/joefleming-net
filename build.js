@@ -1,6 +1,7 @@
 require('dotenv').load();
 
 var metalsmith = require('metalsmith');
+var env = require('metalsmith-env');
 var filter = require('metalsmith-filter');
 var helpers = require('metalsmith-discover-helpers');
 var collections = require('metalsmith-collections');
@@ -21,6 +22,7 @@ var buildsteps = metalsmith(__dirname)
 .metadata(metadata)
 .source('src')
 .destination('build')
+.use(env())
 .use(server())
 .use(filter(['**', '!**/.DS_Store']))
 .use(helpers({
