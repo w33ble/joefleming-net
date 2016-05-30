@@ -7,13 +7,9 @@ tags: "development,PHP,PHP,Software,Web Development"
 
 <p>I needed to "asynchronous PHP" recently and it took me a little while to find the solution. What my script basically does is generate a PDF file for the user to download based on some parameters they have chosen. The problem was, the PDF generate take a while and during that time I needed to show the user a screen explaining that the file was being generated, which would also show the download link once the generation was complete. My setup is as follows:</p>
 
-<p><code>generate.php</code></p>
+<p><em>generate.php</em>: This script is where the user is sent when they click "download" on the parameter choice page. This is where the asynchronous magic has to happen. From here, the user is immediately sent to <em>download.php</em>.</p>
 
-<p>This script is where the user is sent when they click "download" on the parameter choice page. This is where the asynchronous magic has to happen. From here, the user is immediately sent to <em>download.php</em>.</p>
-
-<p><code>download.php</code></p>
-
-<p>This script gives the user either a "please wait" message of a "click here to download" message, depending on where the target PDF has been generated yet.</p>
+<p><em>download.php</em>: This script gives the user either a "please wait" message of a "click here to download" message, depending on where the target PDF has been generated yet.</p>
 
 <p>My problem was, even though was added the header redirect code (shown below) to <em>generate.php</em>, the browser would still wait for the PDF to be generated before sending the user to <em>download.php</em>. In other words, it was only synchronous PHP, which didn't help me at all.</p>
 

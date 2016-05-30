@@ -28,6 +28,7 @@ sudo dhclient eth1</code></pre>
 <p>UPDATE: If you're getting an error saying <code>missing autoconf.h</code>, try following the instructons <a href="http://ubuntuforums.org/showthread.php?t=1597605&p=10049520#post10049520">from this post</a>. It's kind of a dirty hack, but it works.</p>
 
 <p>At this point, the machine will try to assign an IP address for the card. This may or may not work; for me, it did not. To get mine working, I simply restarted the networking init script. Before that though, let's add the following to <em>/etc/network/interfaces</em></p>
+
 <pre><code># The secondary network interface
 auto eth1
 iface eth1 inet dhcp</code></pre>
