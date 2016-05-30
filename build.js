@@ -31,7 +31,11 @@ var buildsteps = metalsmith(__dirname)
 }))
 .use(sass())
 .use(collections({
-  posts: 'content/posts/*',
+  posts: {
+    pattern: 'content/posts/*',
+    sortBy: 'date',
+    reverse: true,
+  }
 }))
 .use(markdown())
 .use(snippet({
