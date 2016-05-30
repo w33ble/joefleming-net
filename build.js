@@ -2,6 +2,7 @@ require('dotenv').load();
 
 var metalsmith = require('metalsmith');
 var filter = require('metalsmith-filter');
+var helpers = require('metalsmith-discover-helpers');
 var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
 var server = require('./lib/server');
@@ -26,6 +27,9 @@ var buildsteps = metalsmith(__dirname)
 .destination('build')
 .use(server())
 .use(filter(['**', '!**/.DS_Store']))
+.use(helpers({
+  directory: 'lib/helpers'
+}))
 .use(sass())
 .use(collections({
   posts: 'content/posts/*',
