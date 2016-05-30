@@ -14,7 +14,7 @@ The rules for hacking the terminals are:
 - For each word you pick, you will be told how many matching letters you got
 - That count is how many matching letters there are in the SAME position of the correct word
 
-Originally, I was going to write it in Python. That way I could potentially execute it from anywhere I could install the Python interpreter and it would give me a reason to dive in to Python. Then I decided I wanted it done quick, and in an even more portable way; as a raw HTML page. [So, I decided to write my version in Javascript on a static HTML page.](/files/fallout3terminalhacker)
+Originally, I was going to write it in Python. That way I could potentially execute it from anywhere I could install the Python interpreter and it would give me a reason to dive in to Python. Then I decided I wanted it done quick, and in an even more portable way; as a raw HTML page. [So, I decided to write my version in Javascript on a static HTML page.](/files/fallout3terminalhacker.html)
 
 I used the one over at mediumexposure.com as a benchmark and honed mine down a bit (I didn't catch that last rule when I was playing the game, which is why I could never figure the puzzles out). I will admit, mine isn't as smart as his since it doesn't take past guesses and matches into account, only the most recent guess and the remaining list of possible words. So, there's a chance mine won't guess correctly in the 4 attempts, but in the handful of tests I ran, I always managed to get it.
 
