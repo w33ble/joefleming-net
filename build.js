@@ -14,7 +14,6 @@ var snippet = require('metalsmith-snippet')
 var buildsteps = metalsmith(__dirname)
 .metadata({
   title: "joefleming.net",
-  description: "My personal site and blog.",
   generator: "Metalsmith",
   url: "http://www.metalsmith.io/",
   site: {
