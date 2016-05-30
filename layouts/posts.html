@@ -7,20 +7,35 @@
     <!-- Main -->
       <div id="main">
 
-      <section>
+      <article>
         <header class="major">
           <h2>{{ title }}</h2>
           {{#if description }}<p>{{ description }}</p>{{/if}}
         </header>
         {{{ contents }}}
+      </article>
+
+
+      <section class="post-navigation navigation no-border">
+        <div class="row">
+          <div class="6u 12u$(xsmall) prev">
+            {{#if previous}}
+              <a href="/{{ previous.path }}">&#8604; {{ previous.title }}</a>
+            {{else}}
+              &nbsp;
+            {{/if}}
+          </div>
+          <div class="6u 12u$(xsmall) next">
+            {{#if next}}
+              <a href="/{{ next.path }}">{{ next.title }} &#8605;</a>
+            {{else}}
+              &nbsp;
+            {{/if}}
+          </div>
+        </div>
       </section>
 
-      <section>
-        <ul class="copyright">
-          <li>&copy; Joe Fleming</li>
-          <li>Design: <a href="/http://html5up.net">HTML5 UP</a></li>
-        </ul>
-      </section>
+      {{> copyright }}
     </div>
 
     {{> footer }}
