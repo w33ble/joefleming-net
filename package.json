@@ -17,6 +17,7 @@
     "metalsmith-date-formatter": "~1.0.2",
     "metalsmith-discover-helpers": "~0.1.0",
     "metalsmith-express": "~0.1.0",
+    "metalsmith-feed": "~0.2.0",
     "metalsmith-filter": "~1.0.2",
     "metalsmith-in-place": "~1.4.4",
     "metalsmith-layouts": "~1.4.1",
