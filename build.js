@@ -5,6 +5,7 @@ var filter = require('metalsmith-filter');
 var helpers = require('metalsmith-discover-helpers');
 var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
+var dateFormatter = require('metalsmith-date-formatter');
 var server = require('./lib/server');
 var sass = require('./lib/sass');
 var metallic = require('metalsmith-metallic');
@@ -32,6 +33,11 @@ var buildsteps = metalsmith(__dirname)
   }
 }))
 .use(metallic())
+.use(dateFormatter({
+  dates: [{
+    date: 'MMM Do, YYYY'
+  }]
+}))
 .use(markdown())
 .use(snippet({
   maxLength: 300,

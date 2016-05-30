@@ -14,6 +14,7 @@
     "handlebars": "~4.0.5",
     "metalsmith": "~2.1.0",
     "metalsmith-collections": "~0.7.0",
+    "metalsmith-date-formatter": "~1.0.2",
     "metalsmith-discover-helpers": "~0.1.0",
     "metalsmith-express": "~0.1.0",
     "metalsmith-filter": "~1.0.2",
