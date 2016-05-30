@@ -1,1 +1,10 @@
-{{> posts_summary }}
+---
+title: Home
+permalink: false
+---
+
+{{#each (limit collections.posts 0 5)}}
+  {{> post_summary }}
+{{/each}}
+
+{{> all-posts }}

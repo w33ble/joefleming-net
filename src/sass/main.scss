@@ -205,6 +205,10 @@
 		&.special {
 			text-align: center;
 		}
+
+		&.padded {
+			padding: 1.0em 0;
+		}
 	}
 
 	header {
@@ -239,13 +243,9 @@
 				font-size: 2em;
 			}
 		}
-	}
 
-/* Navigation */
-
-	.navigation {
-		.next {
-			text-align: right;
+		.sub {
+			font-size: 0.7em;
 		}
 	}
 
@@ -1293,7 +1293,7 @@
 				background-position:	top left,	center center;
 				background-size:		auto,		cover;
 				left: auto;
-				padding: ($size-header-pad) $size-header-pad;
+				padding: ($size-header-pad * 1.5) $size-header-pad;
 				position: relative;
 				text-align: center;
 				top: auto;
@@ -1305,6 +1305,11 @@
 					br {
 						display: inline;
 					}
+				}
+
+				.image.avatar {
+					width: 100px;
+					height: 100px;
 				}
 			}
 
@@ -1404,8 +1409,6 @@
 		/* Header */
 
 			#header {
-				padding: ($size-header-pad * 1.5) $size-header-pad;
-
 				h1 {
 					font-size: 1.35em;
 				}
@@ -1500,9 +1503,8 @@
 					}
 				}
 
-				.image.avatar {
-					width: 100px;
-					height: 100px;
+				h2, h3, h4, h5, h6 {
+					display: none;
 				}
 			}
 
