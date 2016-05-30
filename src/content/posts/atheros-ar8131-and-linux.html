@@ -20,7 +20,7 @@ tags: "ubuntu, software, linux"
 
 <p>Once you're in there, it's time to start that terminal magic! One note; if you've already added another network card to your machine, the Atheros card may be eth1, not eth0. This was the case for me, and I'll treat all the instructions here as though that's the case for you too. If it's not, just change eth1 to eth0.</p>
 
-<pre><code>make && sudo make install
+<pre><code class="hljs">make && sudo make install
 sudo modprobe atl1e
 sudo ifconfig eth1 up
 sudo dhclient eth1</code></pre>
@@ -29,11 +29,11 @@ sudo dhclient eth1</code></pre>
 
 <p>At this point, the machine will try to assign an IP address for the card. This may or may not work; for me, it did not. To get mine working, I simply restarted the networking init script. Before that though, let's add the following to <em>/etc/network/interfaces</em></p>
 
-<pre><code># The secondary network interface
+<pre><code class="hljs"># The secondary network interface
 auto eth1
 iface eth1 inet dhcp</code></pre>
 
 <p>And lastly, restart the network on the machine (you CAN reboot, but there's no need).</p>
-<pre><code>sudo /etc/init.d/networking restart</code></pre>
+<pre><code class="hljs">sudo /etc/init.d/networking restart</code></pre>
 
 <p>At this point, you should have your network card up and running with an IP address assigned by your DHCP server or router. If not, keep hunting I guess, but you should at least be very close!</p>

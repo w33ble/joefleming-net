@@ -15,7 +15,7 @@ tags: "Computers &amp; Technology,Linux,Software"
 
 <p>This method uses a local firewall, iptables in Linux in this example, to drop these rogue reset requests completely from your Bittorrent traffic and can be added on top of your existing rules if you have any. In this example, you would replace $TORRENT_CLIENT_PORT with the port your torrent client is actually using. Be sure you run this command as root or through sudo.</p>
 
-<pre><code>iptables -A INPUT -p tcp --dport $TORRENT_CLIENT_PORT --tcp-flags RST RST -j DROP</code></pre>
+<pre><code class="hljs">iptables -A INPUT -p tcp --dport $TORRENT_CLIENT_PORT --tcp-flags RST RST -j DROP</code></pre>
 
 <p>What this will allow, if you are on a network that employs this technique, is for you to seed torrents that have already finished downloading. This is great for keeping up your ratio on private trackers and being a good user in general.</p>
 

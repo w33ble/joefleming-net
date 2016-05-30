@@ -7,6 +7,7 @@ var collections = require('metalsmith-collections');
 var markdown = require('metalsmith-markdown');
 var server = require('./lib/server');
 var sass = require('./lib/sass');
+var metallic = require('metalsmith-metallic');
 var permalinks = require('./lib/permalinks');
 var layouts = require('./lib/layouts');
 var snippet = require('metalsmith-snippet')
@@ -30,6 +31,7 @@ var buildsteps = metalsmith(__dirname)
     reverse: true,
   }
 }))
+.use(metallic())
 .use(markdown())
 .use(snippet({
   maxLength: 300,

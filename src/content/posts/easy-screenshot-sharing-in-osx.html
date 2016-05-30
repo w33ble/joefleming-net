@@ -12,12 +12,12 @@ icon: mac
 
 <p>First, <a href="http://osxdaily.com/2011/01/26/change-the-screenshot-save-file-location-in-mac-os-x/">change the screenshot save location</a>:</p>
 
-<pre><code>defaults write com.apple.screencapture location ~/Dropbox/Public
+<pre><code class="hljs">defaults write com.apple.screencapture location ~/Dropbox/Public
 killall SystemUIServer</code></pre>
 
 <p>Next, <a href="http://forums.dropbox.com/topic.php?id=4659">create an Applescript</a> file to copy the URL of new files:</p>
 
-<pre><code>on adding folder items to this_folder after receiving added_items
+<pre><code class="hljs applescript">on adding folder items to this_folder after receiving added_items
 	try
 		set the item_count to the number of items in the added_items
 		if the item_count is equal to 1 then

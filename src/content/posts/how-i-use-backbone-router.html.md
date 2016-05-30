@@ -15,7 +15,7 @@ So, how do we handle legacy browsers without hashes? How do we allow them to use
 
 Setting it this up with Backbone is simple. Using Modernizr, or any other method of testing for pushState support, all you need to do is start Backbone.History thusly:
 
-<pre><code>
+<pre><code class="hljs javascript">
 Backbone.history.start({
   pushState: true,
   hashChange: Modernizr.history ? true : false

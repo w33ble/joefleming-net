@@ -14,7 +14,7 @@ icon: harddrive
 
 <p>In my case, /dev/sdc1 and /dev/sdd1 were the 2 drives that failed. /dev/sdc went first, so I suspected that /dev/sdd was still ok. After some prodding of the <a href="http://plug.phoenix.az.us/">PLUG</a> mailing list and a little poking around on Google, I was able to solve my problem. First, I needed to see if I could verify that /dev/sdc was really the drive that failed; I did this with mdadm's --examine function.</p>
 
-<pre><code>sudo mdadm --examine /dev/sda1
+<pre><code class="hljs">sudo mdadm --examine /dev/sda1
 sudo mdadm --examine /dev/sdb1
 sudo mdadm --examine /dev/sdc1
 sudo mdadm --examine /dev/sdd1</code></pre>
@@ -23,12 +23,12 @@ sudo mdadm --examine /dev/sdd1</code></pre>
 
 <p>Since I use 4 of the same drives and for whatever reason the /dev label don't match up with the controller labels (ie. /dev/sda is not on port 1 of the card), I needed to find out the serial numbers of the drives. There are a couple ways to do this, but for whatever reason, only smartctl worked for me. Here's a couple ways to look it up (where /dev/sdX is the device you are trying to find information about, like /dev/sdc in my case):</p>
 
-<pre><code>sudo hdparm -i /dev/sdX
+<pre><code class="hljs">sudo hdparm -i /dev/sdX
 sudo smartctl -a /dev/sdX</code></pre>
 
 <p>Once I knew the serial number, I shut the box down, replaced the drive and booted back up. Now I just needed to format /dev/sdc1, add /dev/sdd1 back to the array, add /dev/sdc1 as a new device to the array.</p>
 
-<pre><code>sudo fdisk /dev/sdc (set up 100% of the drive as a Linux-raid Autodetect)
+<pre><code class="hljs">sudo fdisk /dev/sdc (set up 100% of the drive as a Linux-raid Autodetect)
 sudo mdadm --assemble --force /dev/md0 /dev/sda1 /dev/sdb1 /dev/sdd1
 sudo mdadm --manage /dev/md0 --add /dev/sdc1
 cat /proc/mdstat</code></pre>

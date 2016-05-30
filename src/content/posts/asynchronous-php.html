@@ -17,7 +17,7 @@ tags: "development,PHP,PHP,Software,Web Development"
 
 <p>Thanks to <a href="http://www.php.net/manual/en/features.connection-handling.php#89177" rel="ext">this comment</a> on php.net, I was able to make it work! Basically, you need to tell the browser that you are done sending it data, even though the PHP script will keep executing. Code below:</p>
 
-<pre><code>//redirects the browser to the new url, but continues processing in the background
+<pre><code class="hljs php">//redirects the browser to the new url, but continues processing in the background
 function redirect_and_continue($sURL) {
     header( "Location: ".$sURL );
     ob_end_clean();

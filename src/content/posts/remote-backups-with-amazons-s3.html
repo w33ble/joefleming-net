@@ -15,7 +15,7 @@ tags: "Computers &amp; Technology,Linux,Open Source,Software,software"
 
 <p>Next up, I needed a way to script my backups. I was planning to use the s3fs Fuse library but I thought that might be overkill. Plus, for whatever reason, I'm just not ready to play with Fuse; it's super cool, but I just didn't feel like setting it up. Plus, I found <a href="http://s3tools.org/s3cmd">s3cmd</a>. Like s3://, it stores your login info to ease login and access of your files, but it offers one more step that is vital (at least to me); encryption!</p>
 
-<pre><code>s3cmd -e put myfile s3://mybucket</code></pre>
+<pre><code class="hljs">s3cmd -e put myfile s3://mybucket</code></pre>
 
 <p>This will encrypt <em>myfile</em> locally and upload encrypted version to my bucket on S3. <code>s3cmd</code> uses symetric gpg and stores the password when you configure your AWS login information. Best of all, it transparently decrypts the file(s) when you download them from your s3 account. You don't even have to tell <code>s3cmd</code> that the file is encrypted, it automatically knows. Amazing!</p>
 

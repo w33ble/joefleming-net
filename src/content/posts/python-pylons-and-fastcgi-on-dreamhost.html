@@ -11,7 +11,7 @@ date: 2007-12-02
 
 <p>First, we might as well roll our own version of Python. We could use what's on their servers, but it's a little out of date and rolling your own will allow you to more easily tweak things to your needs and install things you need. Thanks to the link above, this couldn't be simpler. Start by SSHing into your account, then from your home directory, execute the following.</p>
 
-<pre><code>mkdir opt
+<pre><code class="hljs bash">mkdir opt
 mkdir downloads
 cd downloads
 wget http://www.python.org/ftp/python/2.5.1/Python-2.5.1.tgz
@@ -19,12 +19,12 @@ tar xvzf Python-2.5.1.tgz</code></pre>
 
 <p>As pointed out on Ryan Kanno's page, this will create 2 directories (opt and downloads), download a copy of Python (version 2.5.1) to the download directory and uncompress the file. You're going to install everything in opt in your home directory just because that's the way he did it, but you can change that to anything you want. Just make sure that if you DO change it, you also change it in the next set.</p>
 
-<pre><code>cd Python-2.5.1
+<pre><code class="hljs bash">cd Python-2.5.1
 ./configure --prefix=$HOME/opt/ --enable-unicode=ucs4 && make && make install</code></pre>
 
 <p>What this does is configure and compile your new version of Python and install it in the opt directory we made before. Again, if you changed the directory, change it here too. If you get errors, the compilation will stop without installing. Everything went smooth for me, so if you have problems, hit Google or the discussions over at the <a href="http://discussion.dreamhost.com/wwwthreads.pl" rel="ext">DreamHost Forums</a>. Next, we need a way to let Python talk to MySQL (unless you aren't using a database, but you probably are, so just continue on).</p>
 
-<pre><code>cd ..
+<pre><code class="hljs bash">cd ..
 wget http://internap.dl.sourceforge.net/sourceforge/mysql-python/MySQL-python-1.2.2.tar.gz
 tar xvzf MySQL-python-1.2.2.tar.g
 cd MySQL-python-1.2.2
@@ -32,23 +32,23 @@ python setup.py install</code></pre>
 
 <p>Couldn't be simpler. The last step is to make sure we're going to be using the proper version of python when we are logged in. You can copy and paste the code, or if you understand how to add things to your PATH on your own, do it by hand.</p>
 
-<pre><code>echo "export PATH=\$HOME/opt/bin/:\$PATH" &gt;&gt; ~/.bash_profile
+<pre><code class="hljs bash">echo "export PATH=\$HOME/opt/bin/:\$PATH" &gt;&gt; ~/.bash_profile
 source ~/.bash_profile
 which python</code></pre>
 
 <p>The last commend should echo <em>/home/&lt;username&gt;/opt/bin/python</em> if you left the directory structure alone. If you you see <em>/usr/bin/python</em> then your PATH is wrong. Try again or Google how the PATH works and fix it. You can also remove the download directory if you so choose.</p>
 
-<pre><code>cd ~
+<pre><code class="hljs bash">cd ~
 rm -Rf downloads</code></pre>
 
 <p>We're now ready to switch over to Michele Campeotto's page. You could set up virtual-python as suggested there, but I'm a fan of compiling and this makes sure that upgrading and maintaining your own versions is simple and that any DreamHost upgrades won't break your code. The flip side is that YOU are in charge of keeping up with upgrades, but I personally don't mind that. The call is yours. Anyway, we want to step in where Pylons is installed, so let's go ahead and do that.</p>
 
-<pre><code>easy_install Pylons
+<pre><code class="hljs bash">easy_install Pylons
 easy_install Flup</code></pre>
 
 <p>Easy once Python is installed isn't it? If you paid attention here, I also added Flup here. We're going to use Flup instead of the fcgi.py file referenced over there. I'm not sure why, but that method refused to work for me, but Flup worked without any problems. You can also install QuickWiki to test out Pylons if you'd like, or just jump into development. <strong>The important differences are in the dispatch.fcgi file</strong>.</p>
 
-<pre><code>#!/home/&lt;username&gt;/opt/bin/python
+<pre><code class="hljs bash">#!/home/&lt;username&gt;/opt/bin/python
 
 import sys
 
@@ -60,7 +60,7 @@ WSGIServer(app).run()</code></pre>
 
 <p>Note that I added the line '<em>import sys</em>' there. I've also used '<em>from flup.server.fcgi_fork import WSGIServer</em>' so that we use Flup and not fcgi.py. These are the vital differences between a working Python install and a non-working one. I've been bashing my head against the wall trying to make this work for the last 24 hours and it's finally done. Now I can learn Python and Pylons :). Here's a simple "Hello World" example in the event that you don't want to install Pylons, QuickWiki or anything else.</p>
 
-<pre><code>#!/home/&lt;username&gt;/opt/bin/python
+<pre><code class="hljs bash">#!/home/&lt;username&gt;/opt/bin/python
 
 import sys
 from flup.server.fcgi_fork import WSGIServer

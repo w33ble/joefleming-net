@@ -11,7 +11,7 @@ tags: "Site News,ubuntu"
 
 <p>First things first, in order to configure PPTP using network-manager, you'll need to install the PPTP plugin for it.</p>
 
-<pre><code>$ sudo apt-get install network-manager-pptp</code></pre>
+<pre><code class="hljs">$ sudo apt-get install network-manager-pptp</code></pre>
 
 <p>After installing it, you will need to at least log off to restart network-manager. For me, I had to reboot. Before I did, I kept getting an error about a lack of secrets, which basically means that it can't connect to the password manager. Rebooting fixed that.</p>
 
@@ -26,11 +26,11 @@ tags: "Site News,ubuntu"
 
 <p>Now, select the VPN connection and check out the routes.</p>
 
-<pre><code>$ route</code></pre>
+<pre><code class="hljs">$ route</code></pre>
 
 <p>If all went well, you should see some new routes going to the VPN network and be able to connect to the network resources. Something like this...</p>
 
-<pre><code>Kernel IP routing table
+<pre><code class="hljs">Kernel IP routing table
 Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 10.242.1.0      *               255.255.255.255 UH    0      0        0 ppp0
 some.domain     192.168.1.1     255.255.255.255 UGH   0      0        0 eth0

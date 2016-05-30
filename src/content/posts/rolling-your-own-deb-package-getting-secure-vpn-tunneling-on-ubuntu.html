@@ -7,7 +7,7 @@ icon: ubuntu
 
 <p>As you may or may not know, Ubuntu doesn't include a build environment by default. What this means is that in order to compile program from source, you'll need to get the build environment on your own. This is simple enough though, as outlined below:</p>
 
-<pre><code>sudo apt-get install build-essential checkinstall</code></pre>
+<pre><code class="hljs">sudo apt-get install build-essential checkinstall</code></pre>
 
 <p>This will install 2 things, the build environment (build-essential) and a program that will allow you to install your compiled code as a .deb package (checkinstall). Installing your code as a deb means that you can easily remove it on your own using apt instead of hunting down files and removing them by hand. Instead you just issue <em>apt-get remove PACKAGE</em> as root and it's gone.</p>
 
@@ -15,7 +15,7 @@ icon: ubuntu
 
 <p>First, go get the package from the OpenVPN site. At the time of this writing, version 2.1 RC7 was the latest Beta build. Once you have it downloaded, open up a terminal, navigate to the path you downloaded it to and uncompress it. I won't go through those steps, you should know this much already if you are trying to use VPN tunneling. Once there, execute the following:</p>
 
-<pre><code>sudo apt-get liblzo-dev libssl-dev
+<pre><code class="hljs">sudo apt-get liblzo-dev libssl-dev
 ./configure
 make
 sudo checkinstall</code></pre>

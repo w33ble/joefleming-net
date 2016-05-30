@@ -16,7 +16,7 @@ icon: git
 
 <p>Here's how to add it to your own bash shell. Add this code to your .bash_profile or .bashrc (all these years in Linux and I still don't know the difference) and you're set.</p>
 
-<pre><code>function parse_git_branch {
+<pre><code class="hljs bash">function parse_git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return
     echo "("${ref#refs/heads/}")"
 }
@@ -24,14 +24,14 @@ icon: git
 
 <p>Now, in the PS1, add a call to that function, like so.</p>
 
-<pre><code>export PS1="\u@\h : \w \$(parse_git_branch) $ "
+<pre><code class="hljs">export PS1="\u@\h : \w \$(parse_git_branch) $ "
 </code></pre>
 
 <p>Yours likely looks different than mine, but the important bit is <strong>\$(parse_git_branch)</strong>. If you don't have a PS1 set, you can copy and paste that one. Now, when you enter a path that is a git repo, it'll show the branch you're currently using in the prompt. Sounds quite simple, but it's really handy, especially if you do your git work on the command line!</p>
 
 <p>But what if you want the prompt to also show you if you've got uncommitted changes, untracked files or even if you haven't pushed your changes to remote? Fortunately, that's all pretty easy to add too! Check it:</p>
 
-<pre><code>function parse_git_branch {
+<pre><code class="hljs bash">function parse_git_branch {
     git rev-parse --git-dir > /dev/null 2>&1
     if [ $? -eq 0 ]; then
         git_status="$(git status 2> /dev/null)"

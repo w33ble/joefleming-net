@@ -10,7 +10,7 @@ ignored: true
 
 <p>I've seen a lot about <a href="http://www.w3.org/TR/cors/">CORS</a> lately, and after playing with it a little, I understand why. CORS allows your API to respond to the browser and say that cross-domain scripting is allowed by adding a few simple lines. In my case, I included the following in Express:</p>
 
-<pre><code>res.header("Access-Control-Allow-Origin", "*")
+<pre><code class="hljs javascript">res.header("Access-Control-Allow-Origin", "*")
 res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, auth-token, user-token")
 res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS')</code></pre>
 

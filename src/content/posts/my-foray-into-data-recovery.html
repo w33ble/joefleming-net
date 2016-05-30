@@ -29,23 +29,23 @@ icon: harddrive
 
 <p>I put both drives into my desktop and booted my Ubuntu install. Everything was going well; the drive stopped clicking, I disabled the auto-mount of the drive already so it wasn't hanging the system and it had no problems seeing the drive. I still couldn't mount it though, but that would hopefully be solved by cloning and repairing it. I jumped to the terminal since I didn't need a GUI and fired up dd as follows:</p>
 
-<pre><code>dd if=/dev/hdb of=/dev/hdc conv=noerror</code></pre>
+<pre><code class="hljs">dd if=/dev/hdb of=/dev/hdc conv=noerror</code></pre>
 
 <p>This is just a bitwise clone of the dying drive to the new one, and it tells dd not to quit on errors. This worked for a while, and while it was reporting many errors in the beginning, it didn't stop. That is, until it got about 1.6GB in, then it reported that the destination drive had an I/O error. I was pretty sure that was a false report though and that the source just had some wacky problem that dd couldn't recreate on the destination, so I re-ran the command passing in bs=1024. This was I knew how many bits it was using in 1 byte without any doubt and I could calculate where it was stopping. By my math, 1605884 bytes was where the bad part was, so I tried this:</p>
 
-<pre><code>dd if=/dev/hdb of=/dev/hdc conv=noerror skip=1605884 seek=1605884 count=1</code></pre>
+<pre><code class="hljs">dd if=/dev/hdb of=/dev/hdc conv=noerror skip=1605884 seek=1605884 count=1</code></pre>
 
 <p>What that does is try to copy the first byte (and only the first byte) from the point of failure and appends it to the source exactly where it should. This failed, as I expected. This meant one of two things; I calculated it correctly and I was trying to copy the same bad spot or there were many bad spots on the drive and I was going to have a hell of a time continuing on. So I tried to copy the next byte in:</p>
 
-<pre><code>dd if=/dev/hdb of=/dev/hdc conv=noerror skip=1606908 seek=1606908 count=1</code></pre>
+<pre><code class="hljs">dd if=/dev/hdb of=/dev/hdc conv=noerror skip=1606908 seek=1606908 count=1</code></pre>
 
 <p>This time it worked! So, I dropped the count so that it would keep going until the next error. Luckily for me though, it was the last error on the drive, and five hours later, I had a clone of the damaged drive. Things were looking good! Of course, I still couldn't <em>mount</em> the clone, but at least I had a reliable platform for a restoration. Next, I had to repair the single XFS partition on the drive:</p>
 
-<pre><code>xfs_repair -n /dev/hdc1</code></pre>
+<pre><code class="hljs">xfs_repair -n /dev/hdc1</code></pre>
 
 <p>The -n option says to not write any changes, only report what would be changed. This was a huge report as it was going to fix a LOT of errors. But, again, what did I have to lose? So I ran it without the -n and crossed my fingers. It failed...... but only because it had an outstanding log. Because XFS is a journaling filesystem, that journal (or log) was not written to the drive when it crashed. I captured the log with xfs_metadump but I couldn't find out how to write that log to the drive. So, I ran xfs_repair again without the -n but this time with -L, which forces the log to clear before the repair.</p>
 
-<pre><code>xfs_repair -L /dev/hdc1</code></pre>
+<pre><code class="hljs">xfs_repair -L /dev/hdc1</code></pre>
 
 <h4>The Results</h4>
 

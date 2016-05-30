@@ -9,10 +9,11 @@ date: 2007-04-25
 
 <p>Basically, all you need to do is edit the /etc/X11/xorg.conf file to change the speed settings. Locate the InputDevice section that uses the synaptics driver and add the following lines:
 
-<code><pre>
+<pre><code class="hljs">
 Option  "MinSpeed" "0.5"
 Option  "MaxSpeed" "3"
-Option  "AccelFactor" "0.05"</pre></code>
+Option  "AccelFactor" "0.05"
+</code></pre>
 
 Note that these numbers are a little different from the site linked, but they feel right on my machine. I am running on a 15" WSXGA+ screen after all, so I have a lot more pixels to traverse. Play with the values a little and see what works for you.</p>
 

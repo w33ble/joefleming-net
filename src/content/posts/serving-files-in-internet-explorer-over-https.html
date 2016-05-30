@@ -10,7 +10,7 @@ tags: "Computers &amp; Technology,https,PHP,PHP,Software,Web Development"
 
 <p>This affected IE6, IE7 and IE8 in my testing. The way I was serving the file was through PHP via <a href="http://us2.php.net/manual/en/function.readfile.php">readfile</a>. Before sending the contents of the file, I was, of course, setting some header parameters so that the browser would handle the file and the user wouldn't just see some binary garbage on their screen. In my case, I was serving a PDF file that was being generated server-side and sent to the client. The basic header parameters are as follows:</p>
 
-<pre><code>// We'll be outputting a PDF
+<pre><code class="hljs">// We'll be outputting a PDF
 header('Content-type: application/pdf');
 // It will be called your_file.pdf
 header('Content-Disposition: attachment; filename="your_file.pdf"');
@@ -21,7 +21,7 @@ header('Content-Length: '.filesize($filename));</code></pre>
 
 <p>Luckily, I noticed some additional parameters in the first example on the readfile page, namely the 'Pragma' parameter. Reading some comments on the header function, I stumbled upon <a href="http://www.php.net/manual/en/function.header.php#88038">this one</a>. It basically, says that once you add HTTPS, you need to also tell IE how to handle caching the file. So now, my headers look like this:</p>
 
-<pre><code>// Force clear cache
+<pre><code class="hljs">// Force clear cache
 header('Pragma: public'); // Fix for IE
 header("Expires: 0");  //always expire
 header('Cache-Control: must-revalidate, post-check=0, pre-check=0');

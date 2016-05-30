@@ -7,7 +7,7 @@ date: 2007-12-16
 
 <p>While I was working with the design, I realized that I needed to send over my old bit of code that opened links in new windows. As anyone trying to make valid XHML pages can tell you, the <em>target</em> attribute is no longer valid, so if you want pages to open in a new window and you still want your design to validate properly, you have to do a little scripting. I actually found this script a couple years ago to make MediaWiki links open in new windows and it's served me quite well ever since.</p>
 
-<pre><code>
+<pre><code class="hljs javascript">
 function makeExternal() {
         //make sure the function works
         if (! document.getElementsByTagName) { return; }

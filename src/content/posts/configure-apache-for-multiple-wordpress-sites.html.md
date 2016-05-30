@@ -12,7 +12,7 @@ My solution ended up being to only keep a couple idle processes, drop the max pr
 
 In the end, I ended up with the following in `/etc/apache2/apache.conf` (NOTE: This is on Ubuntu 12.04).
 
-<pre><code>
+<pre><code class="hljs">
 MaxKeepAliveRequests 60
 KeepAliveTimeout 5
 

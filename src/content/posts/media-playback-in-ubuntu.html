@@ -10,7 +10,7 @@ icon: ubuntu
 
 <p>A quick search on Ubuntu Forums yielded <a href="http://ubuntuforums.org/showpost.php?p=5643578&postcount=8">this post</a>. Following the link posted, here's how I got it working from the command line:</p>
 
-<pre><code>$ sudo wget http://www.medibuntu.org/sources.list.d/hardy.list -O /etc/apt/sources.list.d medibuntu.list
+<pre><code class="hljs">$ sudo wget http://www.medibuntu.org/sources.list.d/hardy.list -O /etc/apt/sources.list.d medibuntu.list
 $ wget -q http://packages.medibuntu.org/medibuntu-key.gpg -O- | sudo apt-key add - && sudo apt-get update
 $ sudo apt-get install non-free-codecs w32codecs</code></pre>
 
