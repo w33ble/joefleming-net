@@ -11,17 +11,10 @@ var permalinks = require('./lib/permalinks');
 var layouts = require('./lib/layouts');
 var snippet = require('metalsmith-snippet')
 
+var metadata = require('./metadata');
+
 var buildsteps = metalsmith(__dirname)
-.metadata({
-  title: "joefleming.net",
-  generator: "Metalsmith",
-  url: "http://www.metalsmith.io/",
-  site: {
-    title: 'joefleming.net',
-    url: 'http://joefleming.net',
-    author: 'Joe Fleming',
-  },
-})
+.metadata(metadata)
 .source('src')
 .destination('build')
 .use(server())

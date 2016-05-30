@@ -1,0 +1,10 @@
+{
+  "title": "joefleming.net",
+  "generator": "Metalsmith",
+  "url": "http://www.metalsmith.io/",
+  "site": {
+    "title": "joefleming.net",
+    "url": "http://joefleming.net",
+    "author": "Joe Fleming"
+  }
+}
