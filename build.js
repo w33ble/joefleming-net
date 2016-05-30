@@ -67,6 +67,7 @@ buildsteps
   '/posts/slim-jade': '/posts/slim-jade-a-light-weight-php-framework-using-jade-templates',
   '/posts/static-sites-rock': '/posts/static-websites-rock',
   '/posts/wordpress-out-docpad-in': '/posts/wordpress-is-out-docpad-is-in',
+  '/posts/asynchronous-php': '/posts/asynchronous-file-downloads-in-php'
 }))
 .build(function(err, files) {
   if (err) { throw err; }
