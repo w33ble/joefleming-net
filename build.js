@@ -24,7 +24,6 @@ var buildsteps = metalsmith(__dirname)
 .use(sass())
 .use(collections({
   posts: 'content/posts/*',
-  news: 'content/news/*',
 }))
 .use(markdown())
 .use(snippet({
