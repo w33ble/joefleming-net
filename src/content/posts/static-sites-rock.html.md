@@ -10,19 +10,19 @@ Instead, I've started focusing on making really simple PHP sites using [Slim](ht
 
 However, a thought occurred to me; if all I'm building is static sites, why am I even using PHP? Why not go even father and commit to a static site generation tool and just host static HTML?
 
-## Static Sites?!
+*Static Sites?!*
 
 Before I get ahead of myself, let me address the question of "why static sites?" At the base level, I don't want to give my clients another problem to deal with. Blogging and CMS platforms approach the problem of content by treating it as data and just slapping and interface on a database. These tools are simple enough to use, but the cost is your need to maintain the tools in addition to your content. If you're not running updates, you run a high risk of getting your site hacked. How often should you perform the updates? Who's going to do it? And it's not uncommon for these updates to break your site, and then what? Pay someone else to fix it? When will they get to you, and how long will your site be down? How much is this fix going to cost? When will it happen again? On and on...
 
 As it turns out, for most sites, generating content on the fly, every time, as users request it, is overkill. Unless you're a content company pushing updates all day long, a CMS is too much for your needs. It makes a lot more sense to simply generate a static version of the site once, as you add new content, and just host that new version.
 
-## What about caching?
+*What about caching?*
 
 So what about caching? Wordpress has a few really good caching plugins, and Varnish is an option too. But, these are really just bandaids. You're going out of your way to undo what Wordpress (or whatever other CMS you're using) does; render your content on the fly.
 
 In order to add caching, now you're adding more stuff to maintain. If you're looking at Varnish or some other server-side option, or even at putting your site behind a cachine CDN service, well congratulations, now you get to learn about server administration. Or, pay someone else to do it for you. And pay for the additional service costs in order to be able to do these things.
 
-## Benefits
+*Benefits*
 
 With a static site, you no longer have to worry about server performance as much. A really cheap (or free) hosting plan may now be a viable option. It may still be slow, but it'll be much faster than if some script was rendering your content on the fly. And because you don't have that server-side processing happening anymore, you can handle a ton more traffic.
 

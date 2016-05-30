@@ -12,20 +12,18 @@ My solution ended up being to only keep a couple idle processes, drop the max pr
 
 In the end, I ended up with the following in `/etc/apache2/apache.conf` (NOTE: This is on Ubuntu 12.04).
 
-<pre><code class="hljs">
+```
 MaxKeepAliveRequests 60
 KeepAliveTimeout 5
-
-&lt;IfModule mpm_prefork_module&gt;
+<IfModule mpm_prefork_module>
     StartServers 4
     MinSpareServers 2
     MaxSpareServers 4
     MaxClients          70
     MaxRequestsPerChild 100
     MaxMemFree 800
-&lt;/IfModule&gt;
-</code></pre>
-
+</IfModule>
+```
 One interesting thing to note is that each Server has a number of SpareServers, so this will actually run between 8 and 16 Apache processes per user. Each process will handle at most 100 requests and then die, causing a new Spare to start up if needed. Processes will remain open for 60 seconds at most, and only stay active for a single user for 5 seconds before handling requests from other users. Lastly [MaxMemFree](https://httpd.apache.org/docs/2.0/mod/mpm_common.html#maxmemfree) isn't quite what it may sound like; this is the most amount of memory that can be consumed before the prefork process is forced to free up more.
 
 Essentially what is happening is idle processes are killed and active processes time out quickly and are very limited in the amount of resources they can consume. This has one big caveat; if your sites run slowly and requests take more than a second or so, requests will start getting very slow under heavy traffic, as they are queued up until a process is free to handle them. [Caching](http://wordpress.org/plugins/wp-super-cache/) will be your savior here, and using a [caching CDN](https://www.cloudflare.com/) will help you out as well.

@@ -5,7 +5,7 @@ tags: software, web development, javascript, backbone
 icon: javascript
 ---
 
-This morning I read an article titled "[Why JavaScript web applications should embrace traditional URLs](http://9elements.com/io/index.php/hybrid-javascript-apps/)", which makes a solid case for not using hashes or hash bangs in your URLs. This was by no means the first article on the topic, but the interesting part was that about half way through, Mathias Schäfer, the author, dives in the query strings and their support in Backbone. Query strings aren't really something I've used with Backbone before, but it was an interesting summary, and goes in to some detail about why they are broken in Backbone.
+This morning I read an article titled [Why JavaScript web applications should embrace traditional URLs](http://9elements.com/io/index.php/hybrid-javascript-apps/), which makes a solid case for not using hashes or hash bangs in your URLs. This was by no means the first article on the topic, but the interesting part was that about half way through, Mathias Schäfer, the author, dives in the query strings and their support in Backbone. Query strings aren't really something I've used with Backbone before, but it was an interesting summary, and goes in to some detail about why they are broken in Backbone.
 
 I recommend reading that article yourself, but the gist was basically that Jeremy Ashkenas, Backbone's author, felt that query strings were best left to the servers, and because Backbone's default routes use hashes that they were too difficult to deal with, so support was dropped completely in version 1.0.0. Mathias makes the point that adding query strings after the hash is perfectly valid, and would only take a little work to build in to Backbone.History, and doing so would help Backbone maintain it's "unopinionated" label.
 
@@ -15,12 +15,12 @@ So, how do we handle legacy browsers without hashes? How do we allow them to use
 
 Setting it this up with Backbone is simple. Using Modernizr, or any other method of testing for pushState support, all you need to do is start Backbone.History thusly:
 
-<pre><code class="hljs javascript">
+```js
 Backbone.history.start({
   pushState: true,
   hashChange: Modernizr.history ? true : false
 });
-</code></pre>
+```
 
 From the Backbone docs, "If you'd like to use pushState, but have browsers that don't support it natively use full page refreshes instead, you can add {hashChange: false} to the options." What's this do, exactly? Well, every time you fire a history update (Backbone.Router.navigate or Backbone.History.navigate), it'll force a page refresh on legacy browsers. Simple as that.
 
