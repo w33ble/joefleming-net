@@ -41,7 +41,7 @@
 	));
 
 	$size-header-width: 35%;
-	$size-header-pad: 4em;
+	$size-header-pad: 3em;
 
 /* Basic */
 
@@ -868,6 +868,30 @@
 		}
 	}
 
+/* Posts */
+
+	article.post {
+		font-size: 1.2em;
+
+		@include breakpoint(small) {
+			font-size: 1.1em;
+		}
+
+		@include breakpoint(xsmall) {
+			font-size: 1em;
+		}
+
+		&.post-summary {
+			font-size: 1em;
+		}
+	}
+
+	.post-navigation {
+		.next {
+			text-align: right;
+		}
+	}
+
 /* Work Item */
 
 	.work-item {
@@ -901,11 +925,12 @@
 		color: _palette(accent2, fg);
 		height: 100%;
 		left: 0;
-		padding: ($size-header-pad * 2) $size-header-pad 0 0;
+		padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
 		position: fixed;
-		text-align: right;
+		text-align: left;
 		top: 0;
 		width: $size-header-width;
+		max-width: 370px;
 
 		strong, b {
 			color: _palette(accent2, fg-bold);
@@ -917,25 +942,29 @@
 
 		h1 {
 			color: _palette(accent2, fg);
-			font-size: 1.35em;
+			font-size: 1.25em;
 			line-height: 1.75em;
 			margin: 0;
 		}
 
-		.image.avatar {
-			border-radius: 100%;
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			width: 150px;
+		.image {
+			text-align: center;
+			display: block;
 			height: 150px;
 
 			&:before {
 				display: none;
 			}
 
-			img {
+			.avatar {
+				display: inline-block;
 				border-radius: 100%;
-				width: 100%;
-				height: 100%;
+				margin: 0 0 (_size(element-margin) * 0.5) 0;
+
+				img {
+					border-radius: 100%;
+					width: 150px;
+				}
 			}
 		}
 
@@ -950,6 +979,7 @@
 		position: fixed;
 		text-align: right;
 		width: $size-header-width;
+		max-width: 370px;
 
 		.icons {
 			margin: (_size(element-margin) * 0.5) 0 0 0;
@@ -1215,20 +1245,14 @@
 	@include breakpoint(large) {
 
 		$size-header-width: 30%;
-		$size-header-pad: 3em;
 
 		/* Header */
 
 			#header {
-				padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
 				width: $size-header-width;
 
-				h1 {
-					font-size: 1.25em;
-
-					br {
-						display: none;
-					}
+				h1 br {
+					display: none;
 				}
 			}
 
@@ -1298,6 +1322,7 @@
 				text-align: center;
 				top: auto;
 				width: 100%;
+				max-width: inherit;
 
 				h1 {
 					font-size: 1.75em;
@@ -1307,9 +1332,11 @@
 					}
 				}
 
-				.image.avatar {
-					width: 100px;
-					height: 100px;
+				.image {
+					.avatar {
+						width: 100px;
+						height: 100px;
+					}
 				}
 			}
 
@@ -1328,6 +1355,7 @@
 				position: relative;
 				text-align: center;
 				width: 100%;
+				max-width: inherit;
 
 				.icons {
 					margin: 0 0 (_size(element-margin) * 0.5) 0;
@@ -1497,13 +1525,13 @@
 			#header {
 				padding: ($size-header-pad) $size-header-pad;
 
-				h1 {
+				h1,h2,h3,h4,h5,h6 {
 					br {
 						display: none;
 					}
 				}
 
-				h2, h3, h4, h5, h6 {
+				.image {
 					display: none;
 				}
 			}
