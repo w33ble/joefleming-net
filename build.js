@@ -4,7 +4,8 @@ var metalsmith = require('metalsmith');
 var env = require('metalsmith-env');
 var filter = require('metalsmith-filter');
 var helpers = require('metalsmith-discover-helpers');
-var collections = require('metalsmith-collections');
+var collections = require('./lib/collections');
+var published = require('./lib/published');
 var markdown = require('metalsmith-markdown');
 var dateFormatter = require('metalsmith-date-formatter');
 var server = require('./lib/server');
@@ -29,13 +30,8 @@ var buildsteps = metalsmith(__dirname)
   directory: 'lib/helpers'
 }))
 .use(sass())
-.use(collections({
-  posts: {
-    pattern: 'content/posts/*',
-    sortBy: 'date',
-    reverse: true,
-  }
-}))
+.use(published())
+.use(collections())
 .use(metallic())
 .use(dateFormatter({
   dates: [{
@@ -54,7 +50,7 @@ buildsteps = layouts(buildsteps);
 buildsteps
 .use(feeds())
 .use(redirects())
-.build(function(err, files) {
+.build(function(err) {
   if (err) { throw err; }
   console.log('Build complete');
 });
