@@ -873,6 +873,10 @@
 	article.post {
 		font-size: 1.2em;
 
+		img {
+			max-width: 100%;
+		}
+
 		@include breakpoint(small) {
 			font-size: 1.1em;
 		}
