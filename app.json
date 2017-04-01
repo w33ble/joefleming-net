@@ -1,9 +1,8 @@
 {
     "name": "joefleming.net",
     "script": "build.js",
-    "max_memory_restart": "120M",
+    "max_memory_restart": "80M",
     "env": {
-        "NODE_ENV": "production",
-        "PORT": 8082
+        "NODE_ENV": "production"
     }
 }
