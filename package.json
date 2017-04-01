@@ -5,8 +5,7 @@
   "description": "a static website",
   "main": "index.js",
   "engines": {
-    "node": "^4.4.4",
-    "npm": "^2.15.1"
+    "node": "^6.9.5"
   },
   "dependencies": {
     "dotenv": "~2.0.0",
