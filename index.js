@@ -1,21 +1,21 @@
-var fs  = require('fs');
-var path = require('path');
-var url = require('url');
-var http = require('http');
-var mime = require('mime');
+const fs  = require('fs');
+const path = require('path');
+const url = require('url');
+const http = require('http');
+const mime = require('mime');
 
-var port = process.env.PORT || 8080;
-var dir = path.resolve('build');
+const port = process.env.PORT || 8080;
+const dir = path.resolve('build');
 
-var server = http.createServer(function (req, res) {
-  var pathname = url.parse(req.url).pathname;
+const server = http.createServer(function (req, res) {
+  const pathname = url.parse(req.url).pathname;
   if (pathname === '/') pathname = '/index.html';
-  var filePath = path.join(dir, pathname);
-  var abs = path.resolve(filePath);
+  const filePath = path.join(dir, pathname);
+  const abs = path.resolve(filePath);
 
   fs.readFile(filePath, function(err, data) {
-    var code = 200;
-    var meta = {};
+    const code = 200;
+    const meta = {};
 
     if (err) {
       meta['Content-Type'] = 'text/plain';

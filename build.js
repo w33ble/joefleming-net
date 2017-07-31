@@ -1,25 +1,25 @@
 require('dotenv').load();
 
-var metalsmith = require('metalsmith');
-var env = require('metalsmith-env');
-var filter = require('metalsmith-filter');
-var helpers = require('metalsmith-discover-helpers');
-var collections = require('./lib/collections');
-var published = require('./lib/published');
-var markdown = require('metalsmith-markdown');
-var dateFormatter = require('metalsmith-date-formatter');
-var server = require('./lib/server');
-var sass = require('./lib/sass');
-var metallic = require('metalsmith-metallic');
-var permalinks = require('./lib/permalinks');
-var layouts = require('./lib/layouts');
-var snippet = require('metalsmith-snippet')
-var feeds = require('./lib/feeds');
-var redirects = require('./lib/redirects');
+const metalsmith = require('metalsmith');
+const env = require('metalsmith-env');
+const filter = require('metalsmith-filter');
+const helpers = require('metalsmith-discover-helpers');
+const markdown = require('metalsmith-markdown');
+const dateFormatter = require('metalsmith-date-formatter');
+const snippet = require('metalsmith-snippet')
+const metallic = require('metalsmith-metallic');
+const server = require('./lib/server');
+const sass = require('./lib/sass');
+const collections = require('./lib/collections');
+const published = require('./lib/published');
+const permalinks = require('./lib/permalinks');
+const layouts = require('./lib/layouts');
+const feeds = require('./lib/feeds');
+const redirects = require('./lib/redirects');
+const metadata = require('./metadata');
 
-var metadata = require('./metadata');
-
-var buildsteps = metalsmith(__dirname)
+// metalsmith build process
+const buildsteps = metalsmith(__dirname)
 .metadata(metadata)
 .source('src')
 .destination('build')
@@ -45,9 +45,8 @@ var buildsteps = metalsmith(__dirname)
 }))
 .use(permalinks());
 
-buildsteps = layouts(buildsteps);
-
-buildsteps
+// wrap the output in layouts
+layouts(buildsteps)
 .use(feeds())
 .use(redirects())
 .build(function(err) {
