@@ -5,7 +5,7 @@
   "description": "a static website",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e js,md,html,scss --ignore build/ build",
+    "dev": "nodemon -e js,md,html,scss --ignore build/ build",
     "build": "NODE_ENV=build node build",
     "prod": "NODE_ENV=production node build"
   },
