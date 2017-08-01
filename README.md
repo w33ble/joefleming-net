@@ -1,6 +1,7 @@
 # What Is This?
 
 [![powered by](https://img.shields.io/badge/powered%20by-metalsmith-blue.svg)](http://www.metalsmith.io/)
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 My static site generator, hosted at [joefleming.net](http://joefleming.net)
 
@@ -19,3 +20,7 @@ script | description
 `dev` | Builds the static assets, starts a dev server, and watches for any changes
 `build` | Builds the static assets
 `prod` | Builds the static assets and starts a simple server to serve them
+
+# License
+
+MIT © [Joe Fleming](https://github.com/w33ble)
