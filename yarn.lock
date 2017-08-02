@@ -152,10 +152,6 @@ async@^2.1.4:
   dependencies:
     lodash "^4.14.0"
 
-"async@~ 0.2.9":
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/async/-/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
-
 async@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/async/-/async-1.0.0.tgz#f8fc04ca3a13784ade9e1641af98578cfbd647a9"
@@ -462,12 +458,6 @@ deep-extend@~0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.4.2.tgz#48b699c27e334bf89f10892be432f6e4c7d34a7f"
 
-defaults@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/defaults/-/defaults-1.0.3.tgz#c656051e9817d9ff08ed881477f3fe4019f3ef7d"
-  dependencies:
-    clone "^1.0.2"
-
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
@@ -529,7 +519,7 @@ end-of-stream@1.0.0:
   dependencies:
     once "~1.3.0"
 
-entities@~1.1:
+entities@~1.1, entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
@@ -732,13 +722,6 @@ fs-readdir-recursive@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs-readdir-recursive/-/fs-readdir-recursive-1.0.0.tgz#8cd1745c8b4f8a29c8caec392476921ba195f560"
 
-fs-tools@^0.2.11:
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/fs-tools/-/fs-tools-0.2.11.tgz#64a6339119f8da687be4d1fdbda37ee0f88e644c"
-  dependencies:
-    async "~ 0.2.9"
-    lodash "~ 2.4.1"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -861,7 +844,7 @@ gray-matter@^2.0.0:
     js-yaml "^3.8.1"
     toml "^2.3.2"
 
-handlebars@*, handlebars@^4.0.5:
+handlebars@^4.0.5:
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.10.tgz#3d30c718b09a3d96f23ea4cc1f403c4d3ba9ff4f"
   dependencies:
@@ -1191,6 +1174,12 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
+linkify-it@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-2.0.3.tgz#d94a4648f9b1c179d64fa97291268bdb6ce9434f"
+  dependencies:
+    uc.micro "^1.0.1"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -1361,10 +1350,6 @@ lodash@^4.0.0, lodash@^4.14.0, lodash@~4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
-"lodash@~ 2.4.1":
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.2.tgz#fadd834b9683073da179b3eae6d9c0d15053f73e"
-
 lodash@~4.11.1:
   version "4.11.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.11.2.tgz#d6b4338b110a58e21dae5cebcfdbbfd2bc4cdb3b"
@@ -1399,9 +1384,19 @@ map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
 
-marked@~0.3.1:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
+markdown-it@^8.3.1:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.3.1.tgz#2f4b622948ccdc193d66f3ca2d43125ac4ac7323"
+  dependencies:
+    argparse "^1.0.7"
+    entities "~1.1.1"
+    linkify-it "^2.0.0"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.3"
+
+mdurl@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -1445,14 +1440,6 @@ metalsmith-date-formatter@^1.0.2:
     lodash.isstring "^3.0.1"
     lodash.transform "^3.0.3"
     moment "^2.10.3"
-
-metalsmith-discover-helpers@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/metalsmith-discover-helpers/-/metalsmith-discover-helpers-0.1.0.tgz#bcccc556a720bd1b537c71b53c00b0de2df7b196"
-  dependencies:
-    defaults "^1.0.3"
-    fs-tools "^0.2.11"
-    handlebars "*"
 
 metalsmith-env@^2.0.0:
   version "2.0.0"
@@ -1509,13 +1496,6 @@ metalsmith-layouts@^1.4.1:
     is-utf8 "^0.2.0"
     lodash.omit "^4.0.2"
     multimatch "^2.0.0"
-
-metalsmith-markdown@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/metalsmith-markdown/-/metalsmith-markdown-0.2.1.tgz#1a1feeb6c76d15407b75271da81509d07932d753"
-  dependencies:
-    debug "~0.7.4"
-    marked "~0.3.1"
 
 metalsmith-metallic@^2.0.1:
   version "2.0.1"
@@ -2440,6 +2420,10 @@ type-is@~1.6.15:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.15"
+
+uc.micro@^1.0.1, uc.micro@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.3.tgz#7ed50d5e0f9a9fb0a573379259f2a77458d50192"
 
 uglify-js@^2.6:
   version "2.8.29"
