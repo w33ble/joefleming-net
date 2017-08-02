@@ -4,7 +4,6 @@ const metalsmith = require('metalsmith');
 // metalsmith build process
 compose(
   require('./lib/env'),
-  require('./lib/server'),
   require('./lib/filter'),
   require('./lib/handlebars_helpers'),
   require('./lib/sass'),
@@ -17,7 +16,8 @@ compose(
   require('./lib/permalinks'),
   require('./lib/layouts'),
   require('./lib/feeds'),
-  require('./lib/redirects')
+  require('./lib/redirects'),
+  require('./lib/server')
 )(
   metalsmith(__dirname)
   .metadata(require('./metadata'))
