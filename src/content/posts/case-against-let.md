@@ -19,7 +19,7 @@ const myFunc = function () {
 
 Why `const`? Because reassigning these things isn't very practical, you wouldn't expect these assignments to change. That is, `$` above should always be the same instance, no matter where you use it in your code.
 
-I actually take a harder stance, which is that you should *never* use `let` in your code. Any time I see `let`, I suspect the author was either either being lazy, or didn't understand the difference between the two. And except for really, *really* rare cases, I contend that code that uses `let` can be written better with `const`. 
+I actually take a harder stance, which is that you should *never* use `let` in your code. Any time I see `let`, I suspect the author was either being lazy, or didn't understand the difference between the two. And except for really, *really* rare cases, I contend that code that uses `let` can be written better with `const`. 
 
 So how can you avoid using `let`? The solution, in my experience, is almost always as simple as using a ternary. Let's take a common example (at least in my experience) of where somewhere might use `let`; setting a default value.
 
