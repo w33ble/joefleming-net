@@ -16,8 +16,7 @@ compose(
   require('./lib/permalinks'),
   require('./lib/layouts'),
   require('./lib/feeds'),
-  require('./lib/redirects'),
-  require('./lib/server')
+  require('./lib/redirects')
 )(
   metalsmith(__dirname)
   .metadata(require('./metadata'))
