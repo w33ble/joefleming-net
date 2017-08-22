@@ -3,11 +3,10 @@
   "version": "2.6.0",
   "private": true,
   "description": "a static website",
-  "main": "build.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon -e js,md,html,scss --ignore build/ build",
-    "build": "NODE_ENV=build node build",
-    "prod": "NODE_ENV=production node build"
+    "dev": "npm run build && nodemon -e js,md,html,scss --ignore build/ dev-server",
+    "build": "NODE_ENV=build node index"
   },
   "engines": {
     "node": "^6.9.5"
@@ -32,6 +31,7 @@
     "metalsmith-snippet": "^2.0.0"
   },
   "devDependencies": {
+    "ecstatic": "^2.2.1",
     "nodemon": "^1.9.2"
   }
 }
