@@ -3,20 +3,20 @@ const metalsmith = require('metalsmith');
 
 // metalsmith build process
 compose(
-  require('./lib/env'),
-  require('./lib/filter'),
-  require('./lib/handlebars_helpers'),
-  require('./lib/sass'),
-  require('./lib/published'),
-  require('./lib/collections'),
-  require('./lib/metallic'),
-  require('./lib/date_formatter'),
-  require('./lib/markdown'),
-  require('./lib/snippet'),
-  require('./lib/permalinks'),
-  require('./lib/layouts'),
-  require('./lib/feeds'),
-  require('./lib/redirects')
+  require('./plugins/env'),
+  require('./plugins/filter'),
+  require('./plugins/handlebars_helpers'),
+  require('./plugins/sass'),
+  require('./plugins/published'),
+  require('./plugins/collections'),
+  require('./plugins/metallic'),
+  require('./plugins/date_formatter'),
+  require('./plugins/markdown'),
+  require('./plugins/snippet'),
+  require('./plugins/permalinks'),
+  require('./plugins/layouts'),
+  require('./plugins/feeds'),
+  require('./plugins/redirects')
 )(
   metalsmith(__dirname)
   .metadata(require('./metadata'))
