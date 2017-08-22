@@ -1,6 +1,6 @@
 {
   "name": "joefleming.net",
-  "script": "build.js",
+  "script": "index.js",
   "max_memory_restart": "200M",
   "env": {
     "NODE_ENV": "production"

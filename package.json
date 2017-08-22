@@ -5,8 +5,9 @@
   "description": "a static website",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run build && nodemon -e js,md,html,scss --ignore build/ dev-server",
-    "build": "NODE_ENV=build node index"
+    "dev": "NODE_ENV=development nodemon -e js,md,html,scss --ignore build/ dev-server",
+    "build": "NODE_ENV=build node build",
+    "start": "NODE_ENV=production node index"
   },
   "engines": {
     "node": "^6.9.5"
