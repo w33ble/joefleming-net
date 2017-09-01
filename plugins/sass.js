@@ -4,17 +4,18 @@ module.exports = (b) => {
   const target = 'css/';
   const isDevelopment = process.env.NODE_ENV === 'development';
 
-  const devConfig = {
-    outputStyle: 'expanded',
+  const config = {
+    outputStyle: 'compressed',
     outputDir: target,
-    sourceMapEmbed: true,
+    includePaths: [
+      'node_modules',
+    ],
+  };
+
+  const devConfig = Object.assign({}, config, {
+    // sourceMapEmbed: true,
     sourceMapRoot: '..',
-  };
+  });
 
-  const prodConfig = {
-    outputStyle: 'compact',
-    outputDir: target,
-  };
-
-  return b.use(sass((isDevelopment) ? devConfig : prodConfig));
+  return b.use(sass((isDevelopment) ? devConfig : config));
 };
