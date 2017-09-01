@@ -1,2 +1,19 @@
-@import 'mobi.css/src/mobi';
+// @import 'mobi.css/src/custom';
+@import 'mobi.css/src/variables';
+@import 'mobi.css/src/mixins';
+@import 'mobi.css/src/resets';
+@import 'mobi.css/src/layout';
+@import 'mobi.css/src/flexbox';
+// @import 'mobi.css/src/table';
+// @import 'mobi.css/src/form';
+@import 'mobi.css/src/utilities';
 
+aside.sidebar {
+  max-width: 250px;
+  padding: 0 20px;
+  text-align: center;
+
+  .avatar img {
+    border-radius: 200px;
+  }
+}

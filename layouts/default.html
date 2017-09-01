@@ -1,28 +1,22 @@
 <!DOCTYPE HTML>
 <html>
   {{> html_head }}
-	<body id="top">
+  <body id="top">
 
-		{{> header }}
-		<!-- Main -->
-		<div id="main">
+    <div class="flex-center">
+      <div class="container">
+        {{#if contents}}
+          <section>
+            {{{ contents }}}
+          </section>
+        {{/if}}
 
-			{{#if contents}}
-			<section>
-				{{{ contents }}}
-			</section>
-			{{/if}}
+        {{> copyright }}
 
-			{{> copyright }}
-		</div>
+        {{> footer }}
+      </div>
 
-		{{> footer }}
-
-		{{> scripts }}
-	</body>
+      {{> aside }}
+    </div>
+  </body>
 </html>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
