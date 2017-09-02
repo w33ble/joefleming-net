@@ -8,6 +8,10 @@
 @import 'mobi.css/src/form';
 @import 'mobi.css/src/utilities';
 
+ul li {
+  list-style: none;
+}
+
 aside.sidebar {
   max-width: 250px;
   padding: $width-gap-big $width-gap;
