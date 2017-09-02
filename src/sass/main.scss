@@ -5,15 +5,29 @@
 @import 'mobi.css/src/layout';
 @import 'mobi.css/src/flexbox';
 // @import 'mobi.css/src/table';
-// @import 'mobi.css/src/form';
+@import 'mobi.css/src/form';
 @import 'mobi.css/src/utilities';
 
 aside.sidebar {
   max-width: 250px;
-  padding: 0 20px;
+  padding: $width-gap-big $width-gap;
   text-align: center;
 
   .avatar img {
     border-radius: 200px;
+  }
+}
+
+.post-header {
+  .meta {
+    margin-left: $width-gap;
+
+    .summary {
+      font-size: $font-size-small;
+    }
+
+    .date {
+      font-size: $font-size-sub-sup;
+    }
   }
 }

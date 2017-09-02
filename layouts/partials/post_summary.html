@@ -1,11 +1,11 @@
-<article class="post post-summary">
-  <header>
-    {{> post-header }}
-  </header>
+<article class="post post-summary top-gap-big">
+  {{> post-header }}
 
   <p>{{{ snippet }}}</p>
 
-  <ul class="align-right actions">
-    <li><a href="/{{ path }}" class="button special">Read More</a></li>
-  </ul>
+  <div class="flex-left top-gap">
+    <div class="unit-1-3">
+      <a href="/{{ path }}" class="btn btn-primary">Read More</a>
+    </div>
+  </div>
 </article>
