@@ -31,3 +31,21 @@ aside.sidebar {
     }
   }
 }
+
+.post-navigation {
+  .prev {
+    text-align: left;
+  }
+
+  .next {
+    text-align: right;
+  }
+}
+
+.post-navigation.all-posts {
+  text-align: center;
+}
+
+.copyright {
+  font-size: $font-size-small;
+}
