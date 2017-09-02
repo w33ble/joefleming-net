@@ -1,4 +1,4 @@
-// @import 'mobi.css/src/custom';
+@import './custom';
 @import 'mobi.css/src/variables';
 @import 'mobi.css/src/mixins';
 @import 'mobi.css/src/resets';
@@ -10,6 +10,12 @@
 
 ul li {
   list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    color: $color-text-link-header;
+  }
 }
 
 aside.sidebar {
