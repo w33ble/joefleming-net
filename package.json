@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon -e js,md,html,scss --ignore build/ dev-server",
-    "build": "NODE_ENV=build node build",
+    "build": "NODE_ENV=production node build",
     "start": "NODE_ENV=production node index"
   },
   "engines": {
