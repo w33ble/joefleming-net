@@ -23,6 +23,10 @@ aside.sidebar {
   padding: $width-gap-big $width-gap;
   text-align: center;
 
+  a {
+    color: $color-text-link-accent;
+  }
+
   .avatar img {
     border-radius: 200px;
   }
@@ -43,6 +47,11 @@ aside.sidebar {
 }
 
 .post-navigation {
+  a {
+    color: $color-text-link-accent;
+    border-bottom: 1px dotted $color-text-link-accent;
+  }
+
   .prev {
     text-align: left;
   }
