@@ -2,9 +2,10 @@
 <html>
   {{> html_head }}
   <body id="top">
-
     <div class="flex-center">
       <div class="container">
+        {{> mobile-header}}
+
         {{#if contents}}
           <section>
             {{{ contents }}}

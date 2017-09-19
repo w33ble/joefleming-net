@@ -18,6 +18,29 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.top-header {
+  padding: $width-gap-half;
+  overflow: hidden;
+  background-color: $color-background-back;
+  margin-left: -$width-gap;
+  margin-right: -$width-gap;
+
+  .avatar img {
+    height: 46px;
+    border-radius: 23px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: $font-size-h3;
+    color: $color-text-link-accent;
+
+    a {
+      color: $color-text-link-accent;
+    }
+  }
+}
+
 aside.sidebar {
   max-width: 250px;
   padding: $width-gap-big $width-gap;
