@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "dotenv": "^4.0.0",
-    "ecstatic": "^2.2.1"
+    "express": "^4.16.3"
   },
   "devDependencies": {
     "handlebars": "^4.0.5",
