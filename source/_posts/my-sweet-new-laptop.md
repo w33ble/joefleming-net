@@ -39,4 +39,4 @@ As you can see, I also pulled all the stickers off the front of the machine (rel
 
 So far, I've used Skype to make video calls, I'm running all kinds of flashy Compiz goodies and even with constant use I get just over 4 hours of battery life. It's not the perfect machine, but it's really, really close, and for the price, I've got no regrets. I'll leave the post at that for now until I have some more time to tweak the machine, but so far it's running beautifully!
 
-UPDATE: [I'm a Mac guy now](/2012/05/13/my-move-to-mac/)
+UPDATE: [I'm a Mac guy now](/posts/my-move-to-mac)
