@@ -34,13 +34,6 @@
 
 <section id="writing">
   <span class="h1"><a href="<%- url_for(theme.nav.articles) %>"><%= __('index.articles') %></a></span>
-  <% if (theme.tags_overview && site.tags.length) { %>
-  <span class="h2"><%= __('index.topics') %></span>
-  <span class="widget tagcloud">
-    <%- tagcloud(theme.tags_overview) %>
-  </span>
-  <span class="h2"><%= __('index.most_recent') %></span>
-  <% } %>
   <ul class="post-list">
     <% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
     <% if (theme.posts_overview.show_all_posts) { %>
@@ -57,6 +50,12 @@
   </ul>
   <% if (theme.posts_overview.show_all_posts) { %>
     <%- partial('_partial/pagination') %>
+  <% } %>
+  <% if (theme.tags_overview && site.tags.length) { %>
+  <span class="h2"><%= __('index.topics') %></span>
+  <span class="widget tagcloud">
+    <%- tagcloud(theme.tags_overview) %>
+  </span>
   <% } %>
 </section>
 
