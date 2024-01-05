@@ -8,7 +8,7 @@ tags:
   - linux
 ---
 
-I recently sent my [Samsung X360 laptop](/posts/my-sweet-new-laptop) to the shop. The bearing on the fan had gone bad so I sent it in for warranty replacement. Before I sent it, I thought I would wipe out all my data since a lot of it was work-related and I didn't need that information getting out, plus I didn't want to confuse the poor tech with Linux.
+I recently sent my {% post_link my-sweet-new-laptop 'Samsung X360 laptop' %} to the shop. The bearing on the fan had gone bad so I sent it in for warranty replacement. Before I sent it, I thought I would wipe out all my data since a lot of it was work-related and I didn't need that information getting out, plus I didn't want to confuse the poor tech with Linux.
 
 When I got it back, I immediately installed Ubuntu's most current version, 9.10 (Karmic Koala). I was really impressed with it; even more-so than with 9.04 in fact. But I ran in to a problem when I was setting it all up; I couldn't get the backlight adjustment to work.
 

@@ -12,7 +12,7 @@ tags:
   - wordpress
 ---
 
-I've tried to [leave Wordpress](/posts/farewell-wordpress) in the past in favor of something that would be more pleasant to use. It's been a long search, but I never found anything that fit the bill. Other CMS systems were just as painful to use, and rolling my own just wasn't appealing enough to actually happen.
+I've tried to {% post_link farewell-wordpress 'leave Wordpress' %} in the past in favor of something that would be more pleasant to use. It's been a long search, but I never found anything that fit the bill. Other CMS systems were just as painful to use, and rolling my own just wasn't appealing enough to actually happen.
 
 This search has been going on for many years now, and a lot has changed since it started. I'm not longer interested in working with PHP, so that rules out a lot of solutions. [Markdown](http://daringfireball.net/projects/markdown/) has become popular, and I find it really pleasant to compose in. And a shift to static site generation has been happening, and I think with good reason, so I wanted to follow that trend.
 

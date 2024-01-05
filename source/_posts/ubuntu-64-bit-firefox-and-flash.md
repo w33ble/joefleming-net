@@ -7,7 +7,7 @@ tags:
   - linux
 ---
 
-OK, so you have this sweet new computer ([much like myself](/posts/my-sweet-new-laptop)) running 64-bit Ubuntu like a champ. Except for one thing; Flash elements on webpages keep flaking out. That is, from time to time, instead of seeing the Flash content, you see a grey box that doesn't do anything. It just sits there, mocking you, until you close and re-open either the tab, or in most cases, the whole browser. Not cool.
+OK, so you have this sweet new computer ({% post_link my-sweet-new-laptop 'much like myself' %}) running 64-bit Ubuntu like a champ. Except for one thing; Flash elements on webpages keep flaking out. That is, from time to time, instead of seeing the Flash content, you see a grey box that doesn't do anything. It just sits there, mocking you, until you close and re-open either the tab, or in most cases, the whole browser. Not cool.
 
 I had this happen in both Firefox and Opera. As it turns out, the problem is related to the machine running a 32-bit version of flash with a 64-bit version of the browser. There are 2 ways to fix this: run a 32-bit browser or run 64-bit flash. But, why would you run a 32-bit browser on your sweet 64-bit machine? Well, because there isn't a 64-bit version of flash... or at least, there wasn't [until recently](http://labs.adobe.com/technologies/flashplayer10/releasenotes_64bit.html).
 

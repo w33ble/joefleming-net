@@ -6,9 +6,9 @@ tags:
   - software
 ---
 
-I posted about my [love for static websites](/posts/static-websites-rock) some time ago, and my feelings haven't changed. My feeling about the tools for making static site, on the other hand, has.
+I posted about my {% post_link static-sites-rock 'love for static websites' %} some time ago, and my feelings haven't changed. My feeling about the tools for making static site, on the other hand, has.
 
-A while back, [I converted this site to Docpad](/posts/wordpress-is-out-docpad-is-in), which worked well enough, but also came with more cognitive overhead than I'd have liked. I scripted a lot of that away, but it was enough to make me stop writing things, which is unfortunate.
+A while back, {% post_link wordpress-out-docpad-in 'I converted this site to Docpad'%}, which worked well enough, but also came with more cognitive overhead than I'd have liked. I scripted a lot of that away, but it was enough to make me stop writing things, which is unfortunate.
 
 When I recently decided to try rebooting this site, and I thought I'd start by trying to upgrade Docpad and all of my plugins. Of course, `npm update` broke pretty much everything, so I was left with a choice: fix it or start over. I like a lot about Docpad, and I think the in-memory, compile-time document database it uses is really interesting, but it wasn't enough for me to keep it around.
 

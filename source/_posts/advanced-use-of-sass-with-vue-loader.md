@@ -9,7 +9,7 @@ tags:
   - vuejs
 ---
 
-As I've [mentioned before](/posts/crushing-on-vue-js/), I've been using Vue.js a bit lately, and really enjoying it. This weekend, I set out to use [Sass](http://sass-lang.com) with [vue-loader](https://vue-loader.vuejs.org/en/), using Webpack 2.2. Getting it working was really simple, just install *node-sass* and *sass-loader*, add `lang="sass"` to your style tag, and everything works.
+As I've {% post_link crushing-on-vue-js 'mentioned before' %}, I've been using Vue.js a bit lately, and really enjoying it. This weekend, I set out to use [Sass](http://sass-lang.com) with [vue-loader](https://vue-loader.vuejs.org/en/), using Webpack 2.2. Getting it working was really simple, just install *node-sass* and *sass-loader*, add `lang="sass"` to your style tag, and everything works.
 
 The problem is, when your styles get built, they get built into your javascript. This is fine for development, but when you create a "build" of your application for hosting, you want at least one separate CSS file with all of your styles in it. CSS loads in parallel with Javascript, and then can also be cached separate from your scripts. Plus, users don't have to wait for all your scripts to load to get styling on the site.
 

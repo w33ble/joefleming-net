@@ -10,7 +10,7 @@ tags:
   - php
 ---
 
-I know I said before that [I would be replacing Wordpress with Drupal](/posts/farewell-wordpress) around here, and I did start working on that. However, the more I read about Drupal, the harder it seems to do custom things. Actually, it's more a problem of poor documentation than it is a lack of flexibility. Still, if I don't know what I'm doing, it's hard to learn anything.
+I know I said before that {% post_link farewell-wordpress 'I would be replacing Wordpress with Drupal' %} around here, and I did start working on that. However, the more I read about Drupal, the harder it seems to do custom things. Actually, it's more a problem of poor documentation than it is a lack of flexibility. Still, if I don't know what I'm doing, it's hard to learn anything.
 
 Granted, I could easily replace Wordpress for the sake of my blog here (and probably still will at some point), but that's not why I was planning to learn it. I wanted something that would allow me to crank out new pages quickly without constantly restarting from scratch. I do have a very weak framework I've written to try to achieve this, but every time I start a new site, I feel compelled to re-do at least part of it, so in the end I don't save any time. In fact, I lose time because I have to re-learn the changes I made for each site when I need to maintain them.
 

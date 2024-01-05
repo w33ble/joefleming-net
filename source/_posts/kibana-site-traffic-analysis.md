@@ -6,7 +6,7 @@ tags:
   - software
 ---
 
-One of the thing I did when I [moved this site over to Metalsmith](/posts/moving-to-metalsmith/) was to put up a very thin Express server and start logging traffic to the site to a [winstond](https://github.com/winstonjs/winstond) log server I set up a little while back. I could use my server logs directly, but I'm already logging a couple of other sites to this log server, and I figured doing it this way would help make that data more portable. Of course now that I have this data, I wanted a way to explore it.
+One of the thing I did when I {% post_link moving-to-metalsmith 'moved this site over to Metalsmith' %} was to put up a very thin Express server and start logging traffic to the site to a [winstond](https://github.com/winstonjs/winstond) log server I set up a little while back. I could use my server logs directly, but I'm already logging a couple of other sites to this log server, and I figured doing it this way would help make that data more portable. Of course now that I have this data, I wanted a way to explore it.
 
 As it happens, I've been working at [Elastic](https://www.elastic.co/) for almost the past 2 years, primarily helping develop [Kibana](https://www.elastic.co/products/kibana), our tool for analysis of data in [Elasticsearch](https://www.elastic.co/products/elasticsearch). What better tool to use to look at my server logs than the tool I hack on for my day job, right?
 

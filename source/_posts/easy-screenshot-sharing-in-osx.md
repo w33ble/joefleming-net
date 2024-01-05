@@ -6,7 +6,7 @@ tags:
 	- software
 ---
 
-Now that I'm [using a Mac](/posts/my-move-to-mac), the [screenshot uploader](https://github.com/w33ble/screenshot-uploader) I wrote isn't all that helpful. Shame, I was really enjoying the quick and easy screenshot sharing. Fortunately, OSX has some built-in hotkeys for taking screenshots. What's more, you can change where they save. What's even *more*, you can add scripted actions to folders with Applescript. Mix in a little Dropbox, and BAM, I'm sharing screenshots with the greatest of ease!
+Now that I'm {% post_link my-move-to-mac 'using a Mac' %}, the [screenshot uploader](https://github.com/w33ble/screenshot-uploader) I wrote isn't all that helpful. Shame, I was really enjoying the quick and easy screenshot sharing. Fortunately, OSX has some built-in hotkeys for taking screenshots. What's more, you can change where they save. What's even *more*, you can add scripted actions to folders with Applescript. Mix in a little Dropbox, and BAM, I'm sharing screenshots with the greatest of ease!
 
 The flow goes like this: Capture screenshot (selection, window, screen, whatever), it gets saved to my Dropbox Public folder, the link gets copied into my clipboard, and I get a Growl notification when it's all ready to go. Here's how.
 
