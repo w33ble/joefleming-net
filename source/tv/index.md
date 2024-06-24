@@ -5,6 +5,33 @@ date: 2024-01-04 16:14:49
 
 TV downloads with over 1k downloads, over the last 2 weeks
 
+## June 24th
+
+- Bridgerton S03E05
+- Bridgerton S03E06
+- Bridgerton S03E07
+- Bridgerton S03E08
+- Dark Matter 2024 S01E07
+- Dark Matter 2024 S01E08
+- Doctor Who 2023 S01E07
+- Evil S04E04
+- Evil S04E05
+- House of the Dragon S02E01
+- House of the Dragon S02E02
+- Interview with the Vampire S02E06
+- Interview With The Vampire S02E07
+- Last Week Tonight with John Oliver S11E15
+- Mayor Of Kingstown S03E03
+- Presumed Innocent S01E02
+- Shoresy S03E05
+- The Acolyte S01E03
+- The Acolyte S01E04
+- The Boys S04E01
+- The Boys S04E02
+- The Boys S04E03
+- The Boys S04E04
+- Welcome to Wrexham S03E08
+
 ## June 17th
 
 - Bridgerton S03E05
