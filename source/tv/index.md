@@ -5,6 +5,23 @@ date: 2024-01-04 16:14:49
 
 TV downloads with over 1k downloads, over the last 2 weeks
 
+## July 9th, 2024
+
+- Dark Matter 2024 S01E09
+- House of the Dragon S02E02
+- House of the Dragon S02E03
+- House of the Dragon S02E04
+- Last Week Tonight with John Oliver S11E16
+- Mayor of Kingstown S03E05
+- Mayor of Kingstown S03E06
+- Presumed Innocent S01E04
+- Presumed Innocent S01E05
+- The Acolyte S01E05
+- The Acolyte S01E06
+- The Bear S03 (all episodes)
+- The Boys S04E05
+- The Boys S04E06
+
 ## July 1st, 2024
 
 - Criminal Minds S17E04
