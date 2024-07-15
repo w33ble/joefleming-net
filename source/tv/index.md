@@ -5,7 +5,19 @@ date: 2024-01-04 16:14:49
 
 TV downloads with over 1k downloads, over the last 2 weeks
 
-## July 9th, 2024
+## July 15th, 2024
+
+- House of the Dragon S02E04
+- House of the Dragon S02E05
+- Mayor of Kingstown S03E06
+- Presumed Innocent S01E05
+- Presumed Innocent S01E06
+- The Acolyte S01E06
+- The Acolyte S01E07
+- The Boys S04E06
+- The Boys S04E07
+
+## July 8th, 2024
 
 - Dark Matter 2024 S01E09
 - House of the Dragon S02E02
