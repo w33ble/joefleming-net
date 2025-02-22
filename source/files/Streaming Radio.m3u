@@ -1,0 +1,81 @@
+#EXTM3U
+#EXTINF:0,ChilloutFM 128 kbit/s
+http://tuner.m1.fm/chillout.mp3
+#EXTINF:0,Chill Out Lounge
+http://ec2.yesstreaming.net:4260/stream
+#EXTINF:0,Chilltrax The World's Chillout Channel
+http://streamssl.chilltrax.com:80/live
+#EXTINF:0,Sound|Coffee|FM
+http://fm.soundcoffee.net:8000/stream128
+#EXTINF:0,BitJam Radio
+http://marmalade.scenesat.com:8086/bitjam.mp3
+#EXTINF:0,SomaFM: Mission Control: Celebrating NASA and Space Explorers everywhere.
+https://ice4.somafm.com/missioncontrol-128-aac
+#EXTINF:0,SomaFM: Space Station Soma: Turn on space out. Spaced-out ambient and mid-tempo electronica.
+https://ice1.somafm.com/spacestation-128-aac
+#EXTINF:0,SomaFM: Vaporwaves: All Vaporwave. All the time.
+https://ice4.somafm.com/vaporwaves-128-aac
+#EXTINF:0,Radio Talsi: Lounge Chillout Mix 320 kbit/s
+http://radio.kuums.lv:5555/stream/1/
+#EXTINF:0,1.FM: Chillout Lounge Radio 128 kbit/s
+http://strm112.1.fm:80/chilloutlounge_128
+#EXTINF:0,Proton Radio
+http://icecast.protonradio.com:8000/schedule
+#EXTINF:0,Noise FM: Modern Electronic Radio 256 kbit/s
+http://noisefm.ru:8000/play_256
+#EXTINF:0,SomaFM: DEF CON Radio: Music for Hacking. The DEF CON Year-Round Channel.
+https://ice1.somafm.com/defcon-128-aac
+#EXTINF:0,SomaFM: Fluid: Drown in the electronic sound of instrumental hiphop
+https://ice2.somafm.com/fluid-128-aac
+#EXTINF:0,SomaFM: Groove Salad: A nicely chilled plate of ambient/downtempo beats and grooves.
+https://ice4.somafm.com/groovesalad-128-aac
+#EXTINF:0,SomaFM: Groove Salad Classic: The classic (early 2000s) version of a nicely chilled plate of ambient/downtempo beats and grooves.
+https://ice1.somafm.com/gsclassic-128-aac
+#EXTINF:0,SomaFM: Beat Blender: A late night blend of deep-house and downtempo chill.
+https://ice2.somafm.com/beatblender-128-aac
+#EXTINF:0,SomaFM: The Trip: Progressive house / trance. Tip top tunes.
+https://ice2.somafm.com/thetrip-128-aac
+#EXTINF:0,SomaFM: cliqhop idm: Blips'n'beeps backed mostly w/beats. Intelligent Dance Music.
+https://ice2.somafm.com/cliqhop-128-aac
+#EXTINF:0,SomaFM: Dub Step Beyond: Dub and Deep Bass. May damage speakers at high volume
+https://ice2.somafm.com/dubstep-128-aac
+#EXTINF:0,SomaFM: PopTron: Electropop and indie dance rock with sparkle and pop.
+https://ice2.somafm.com/poptron-128-aac
+#EXTINF:0,Synthetic FM: The radio for the Synth lovers 192 kbit/s
+http://stream.syntheticfm.com:8040/live
+#EXTINF:21600,BBC: BBC Radio 1 Dance
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_one_dance.m3u8
+#EXTINF:21600,BBC: BBC Radio 1Xtra
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_1xtra.m3u8
+#EXTINF:21600,BBC: BBC Radio 1
+https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_one.m3u8
+#EXTINF:0,Dance Wave! Radio
+http://stream.dancewave.online:8080/dance.mp3
+#EXTINF:0,VKNET Radio Station 2
+http://radio2.vknet.se:7000/stream1
+#EXTINF:0,PARTY VIBE RADIO : DUBSTEP
+http://94.130.242.5:8040/stream
+#EXTINF:0,TranceBase.FM: 24h Vocal Progressive Uplifting Hard-Trance Techno and More 320 kbit/s
+http://aach.stream.tb-group.fm:80/trb-high.aac
+#EXTINF:0,Club Dance Online
+http://s02.diazol.hu:35000/live.mp3
+#EXTINF:0,ADR.FM: Electronic Dance Experience (EDE) 128 kbit/s
+http://patmos.cdnstream.com:9683/stream2?=1
+#EXTINF:0,Discover Trance Radio 128 kbit/s
+http://paris.discovertrance.com:8006/stream/1/
+#EXTINF:0,Liquid DnB Station
+http://95.47.244.172:8000/live
+#EXTINF:0,DnBRadio.com 320kbit
+https://dnbradio.nl/dnbradio_main.mp3
+#EXTINF:0,Basedrive AAC+
+http://stream.bassdrive.uk:8200
+#EXTINF:0,Different Drumz DnB Radio
+http://167.114.174.197:8031/stream
+#EXTINF:0,Dubplate.fm: Drum 'n Bass radio (192k)
+https://sc2.dubplate.fm/radio/8030/dnb/hifi
+#EXTINF:0,Dubplate.fm Dub and Bass
+https://sc2.dubplate.fm/radio/8000/dubandbass/hifi
+#EXTINF:0,DEEP HOUSE LOUNGE www.deephouselounge.com
+http://198.15.94.34:8006/stream
+#EXTINF:0,Rinse FM: Rinse UK
+https://admin.stream.rinse.fm/proxy/rinse_uk/stream
