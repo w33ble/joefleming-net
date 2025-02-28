@@ -1,2 +1,3 @@
-http://strm112.1.fm:80/chilloutlounge_128
+#EXTM3U
 #EXTINF:0,Proton Radio
+http://icecast.protonradio.com:8000/schedule

@@ -1,2 +1,3 @@
-http://ec2.yesstreaming.net:4260/stream
+#EXTM3U
 #EXTINF:0,Chilltrax The World's Chillout Channel
+http://streamssl.chilltrax.com:80/live

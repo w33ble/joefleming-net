@@ -1,2 +1,3 @@
-https://dnbradio.nl/dnbradio_main.mp3
+#EXTM3U
 #EXTINF:0,Basedrive AAC+
+http://stream.bassdrive.uk:8200

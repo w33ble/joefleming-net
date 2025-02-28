@@ -1,2 +1,3 @@
-http://icecast.protonradio.com:8000/schedule
+#EXTM3U
 #EXTINF:0,Noise FM: Modern Electronic Radio 256 kbit/s
+http://noisefm.ru:8000/play_256

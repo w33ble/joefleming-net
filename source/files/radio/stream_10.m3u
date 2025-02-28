@@ -1,2 +1,3 @@
-http://radio.kuums.lv:5555/stream/1/
+#EXTM3U
 #EXTINF:0,1.FM: Chillout Lounge Radio 128 kbit/s
+http://strm112.1.fm:80/chilloutlounge_128

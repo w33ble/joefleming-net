@@ -1,2 +1,3 @@
-http://stream.dancewave.online:8080/dance.mp3
+#EXTM3U
 #EXTINF:0,VKNET Radio Station 2
+http://radio2.vknet.se:7000/stream1
