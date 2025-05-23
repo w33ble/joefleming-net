@@ -5,10 +5,6 @@ http://tuner.m1.fm/chillout.mp3
 http://ec2.yesstreaming.net:4260/stream
 #EXTINF:0,Chilltrax The World's Chillout Channel
 http://streamssl.chilltrax.com:80/live
-#EXTINF:0,Sound|Coffee|FM
-http://fm.soundcoffee.net:8000/stream128
-#EXTINF:0,BitJam Radio
-http://marmalade.scenesat.com:8086/bitjam.mp3
 #EXTINF:0,SomaFM: Mission Control: Celebrating NASA and Space Explorers everywhere.
 https://ice3.somafm.com/missioncontrol-128-mp3
 #EXTINF:0,SomaFM: Space Station Soma: Turn on space out. Spaced-out ambient and mid-tempo electronica.
@@ -17,8 +13,6 @@ https://ice3.somafm.com/spacestation-128-mp3
 https://ice3.somafm.com/vaporwaves-128-mp3
 #EXTINF:0,Radio Talsi: Lounge Chillout Mix 320 kbit/s
 http://radio.kuums.lv:5555/stream/1/
-#EXTINF:0,1.FM: Chillout Lounge Radio 128 kbit/s
-http://strm112.1.fm:80/chilloutlounge_128
 #EXTINF:0,Proton Radio
 http://icecast.protonradio.com:8000/schedule
 #EXTINF:0,Noise FM: Modern Electronic Radio 256 kbit/s
@@ -47,14 +41,10 @@ http://stream.syntheticfm.com:8040/live
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_one_dance.m3u8
 #EXTINF:21600,BBC: BBC Radio 1Xtra
 https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_1xtra.m3u8
-#EXTINF:21600,BBC: BBC Radio 1
-https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_radio_one.m3u8
 #EXTINF:0,Dance Wave! Radio
 http://stream.dancewave.online:8080/dance.mp3
 #EXTINF:0,VKNET Radio Station 2
 http://radio2.vknet.se:7000/stream1
-#EXTINF:0,PARTY VIBE RADIO : DUBSTEP
-http://94.130.242.5:8040/stream
 #EXTINF:0,TranceBase.FM: 24h Vocal Progressive Uplifting Hard-Trance Techno and More 320 kbit/s
 http://lw3.mp3.tb-group.fm:80/trb.mp3
 #EXTINF:0,Club Dance Online
@@ -67,16 +57,12 @@ http://paris.discovertrance.com:8006/stream/1/
 http://95.47.244.172:8000/live
 #EXTINF:0,DnBRadio.com 320kbit
 https://dnbradio.nl/dnbradio_main.mp3
-#EXTINF:0,Basedrive AAC+
+#EXTINF:0,Bassdrive Worldwide Drum and Bass Radio
 http://stream.bassdrive.uk:8200
-#EXTINF:0,Basedrive Alt
-https://chi.bassdrive.co/stream
 #EXTINF:0,Different Drumz DnB Radio
 http://167.114.174.197:8031/stream
 #EXTINF:0,Dubplate.fm: Drum 'n Bass radio (192k)
 https://sc2.dubplate.fm/radio/8030/dnb/hifi
-#EXTINF:0,Dubplate.fm Dub and Bass
-https://sc2.dubplate.fm/radio/8000/dubandbass/hifi
 #EXTINF:0,DEEP HOUSE LOUNGE www.deephouselounge.com
 http://198.15.94.34:8006/stream
 #EXTINF:0,Rinse FM: Rinse UK
